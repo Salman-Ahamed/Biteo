@@ -19,6 +19,7 @@
 11. [Infrastructure & DevOps](#11-infrastructure--devops)
 12. [Deliverables](#12-deliverables)
 13. [Timeline](#13-timeline)
+14. [Bonus Capabilities](#14-bonus-capabilities-preferred)
 
 ---
 
@@ -212,10 +213,11 @@ Supported platforms:
 - YouTube
 
 Features:
-- Connect social media accounts from dashboard
-- Schedule and publish posts directly
+- **Storewise Integration:** Each restaurant connects its **own** social media accounts separately (e.g., Restaurant A has its own FB page, Restaurant B has its own)
+- **Application-level Integration:** Option for platform-wide social media integration (managed by Super Admin)
+- Schedule and publish posts directly from restaurant dashboard
 - Run ad campaigns from dashboard
-- Set ad budget and target audience
+- Set ad budget and target audience per restaurant
 
 ### 5.3 Ad & Funnel Tracking
 
@@ -237,7 +239,16 @@ Funnel: Ad Impression → Click → WhatsApp/Website Visit → Order Placed
 | High-value customers | Send VIP offers |
 | Inactive customers (30+ days) | Send win-back campaign |
 
-### 5.5 Bulk WhatsApp Messaging (Campaign)
+### 5.5 Campaign Automation
+
+- Schedule campaigns to run automatically on specific dates/events (e.g., Eid, weekends)
+- Trigger-based campaigns: auto-send offer when customer hasn't ordered in X days
+- Multi-step campaign flows: Message 1 → Wait 2 days → Message 2 (if no response)
+- Campaign performance dashboard: sent, delivered, read, clicked, converted
+- A/B testing: test two message variants to see which performs better
+- Campaign template library (pre-built templates for common use cases)
+
+### 5.6 Bulk WhatsApp Messaging (Campaign)
 
 - Upload customer list or use existing customer database
 - Create message template with personalization (name, last order, discount)
@@ -414,6 +425,31 @@ Step 7 → SMS/WhatsApp confirmation sent to customer
 | **Module 1** | Core backend, Multi-tenant setup, Auth, Restaurant & Menu APIs, WhatsApp ordering bot, Order management, Kitchen printer integration | 4–6 Weeks |
 | **Phase 2** | AI Marketing tools, Content generation, Campaign system, Ad tracking, Coupon system, Bulk WhatsApp messaging | 2 Weeks |
 | **Phase 3 (Optional)** | AI Voice ordering, Delivery logistics, Mobile app, Advanced analytics | TBD |
+
+---
+
+## 14. Bonus Capabilities (Preferred)
+
+The development team working on Biteo should ideally have experience in the following areas to ensure smooth delivery:
+
+### 14.1 WhatsApp Bot Development
+- Hands-on experience building WhatsApp Cloud API bots
+- Knowledge of interactive message types: buttons, lists, templates
+- Experience handling webhook events, message queues, and delivery receipts
+- Understanding of Meta's messaging policy and template approval process
+
+### 14.2 SaaS Platform Development
+- Prior experience building multi-tenant SaaS products
+- Understanding of tenant isolation strategies (schema-based vs row-based)
+- Experience with subscription billing systems (Stripe or similar)
+- Knowledge of onboarding flows for B2B SaaS platforms
+
+### 14.3 Scaling & Infrastructure
+- Practical experience with Docker and Kubernetes in production
+- AWS / GCP / Azure deployment and management
+- Knowledge of load balancing, auto-scaling, and zero-downtime deployments
+- CI/CD pipeline setup (GitHub Actions, GitLab CI)
+- Experience with monitoring and alerting systems (Grafana, Prometheus)
 
 ---
 
