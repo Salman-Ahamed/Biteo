@@ -450,12 +450,16 @@
 
 - 1,300+ international and local brands (HK)
 - 10,000+ products (HK)
-- 4,000+ products per store
+- 4,000+ products per store (SG), 7,000+ SKUs (MY)
 - 75+ international brands (HK launch)
 - P&G, Unilever partnership
 - Cold Storage (SG), AEON MaxValu (MY), Robinsons Easymart (PH)
 - 1,000+ partner retailers (SG)
 - FairPrice Xpress, Cheers (SG)
+- "bright" private label range (foodpanda's own grocery brand, BD/SG/MY 2024)
+- Housebrand items — 1 in 2 grocery orders includes housebrand
+- Rebel Foods virtual brands partnership (10+ brands, 2,000+ outlets, 6 markets)
+- Brands-as-a-Service (BaaS) model for restaurant partners
 
 ### Features
 
@@ -476,6 +480,9 @@
 - Bulk ordering
 - Scheduled delivery option
 - pandamart-specific promo codes
+- 15-Minute Delivery Guarantee (MY — KL/Penang essentials)
+- AI preference prediction (30% order accuracy improvement, MY)
+- 1.2 million grocery orders per month (MY)
 - Kiasu Pasar Report — consumer insights report (SG Jan 2026)
 
 ---
@@ -721,6 +728,7 @@
   - Financing partnerships (Funding Societies, AEON Bank — MY/BD)
   - Merchant recognition programmes
 - Data insights dashboards (AI-powered recommendations, retail media integrations)
+- Hawker Heroes campaign (MY — 8,000+ street food vendors, waived commission 3 months)
 
 ---
 
@@ -1268,6 +1276,14 @@
 - yuu Rewards Club (Singapore — $1 = 1 point)
   - Redeem at Cold Storage, Giant, 7-Eleven, Guardian
 
+### Priority Plus Subscription (MY)
+
+- RM14.90/month subscription
+- Zero delivery fees on eligible orders
+- 15% discount on orders
+- 750,000 subscribers (Q1 2024)
+- Malaysia-specific tier
+
 ### Voucher System
 
 - Promo codes
@@ -1472,8 +1488,14 @@
 
 ### Sustainability
 
-- World's first cultured meat delivery
-- Sustainable packaging pilot
+- World's first cultured meat delivery (Eat Just / GOOD Meat, SG 2021)
+- Green Label Initiative (SG — with Ministry of Sustainability, flags restaurants using local ingredients)
+- Sustainable Packaging Programme (Delivery Hero global — 10M units eco packaging, 8 country pilots)
+- Green Mode (MY — opt out single-use plastics, RM0.50 cashback, 40% biodegradable packaging)
+- Zero Waste Kitchens (MY — 1,500 eateries, surplus food → underprivileged, 180 tonnes diverted)
+- Reusable packaging programme (Taiwan — with EPA, Tainan City, GoodToGo)
+- Recycling partnership (HK — with Baguio iRecycle)
+- No Cutlery opt-out (app toggle, majority of orders)
 - Less plastic cutlery initiative
 - Gogoro battery swapping pilot (SG)
 - EV fleet (Pakistan, with Punjab govt)
@@ -1576,10 +1598,17 @@
 - GMV (Delivery Hero parent): €49.2B (FY2025)
 - Q-commerce growth: 42%
 - 19M app downloads (Malaysia)
+- 5.2M active users (Malaysia)
+- 75,000+ restaurant partners (Malaysia)
+- 15,000 riders (Malaysia)
+- 65% market share (Malaysia)
+- RM1.8 billion revenue (Malaysia 2023)
+- RM420M pandamart revenue (Malaysia 2023)
 
 ### Subscription Metrics
 
 - Pandapro members: 3.4M
+- Priority Plus subscribers: 750,000 (MY, Q1 2024)
 - Repeat order increase: 22% (PandaPoints)
 - Pandapro membership growth: 20% YoY (Taiwan)
 
