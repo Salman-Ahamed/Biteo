@@ -1,14 +1,9 @@
 # FoodPanda Feature Masterlist
 
-> Comprehensive micro-level feature inventory compiled across 9 rounds of investigation.
-> Total: ~1,180+ micro-features across 28 domains.
-> Compiled: June 2026
-
----
-
 ## 1. Customer App — Discovery & Browse
 
 ### Search
+
 - Search by restaurant name
 - Search by cuisine type
 - Search by dish/item name
@@ -20,6 +15,7 @@
 - Search within a restaurant menu
 
 ### Browse & Feed
+
 - Restaurant list view
 - Restaurant grid/thumbnail view
 - Curated restaurant feed
@@ -54,6 +50,7 @@
 - Near me auto-detect restaurants
 
 ### Restaurant Menu Page
+
 - Full menu listing with categories
 - Item name, description, price display
 - Item photo gallery (multiple images per item)
@@ -82,6 +79,7 @@
 ## 2. Customer App — Cart & Checkout
 
 ### Cart
+
 - Add items to cart
 - Remove items from cart
 - Edit items in cart (modify customisation)
@@ -108,6 +106,7 @@
 - Pandamart cart with weight-based pricing
 
 ### Checkout
+
 - Delivery address input / selection
 - Saved addresses quick-select
 - New address addition
@@ -142,6 +141,7 @@
 ## 3. Customer App — Account & Profile
 
 ### Registration & Login
+
 - Phone number registration
 - Email registration
 - Google/Apple social login
@@ -154,6 +154,7 @@
 - Remember me / auto-login
 
 ### Profile Management
+
 - Profile photo upload
 - Name edit
 - Phone number edit
@@ -173,6 +174,7 @@
 - Notification preferences management
 
 ### Order History
+
 - Past orders list
 - Order details view (items, price, status)
 - Repeat order (quick reorder)
@@ -185,6 +187,7 @@
 - Support contact for order issues
 
 ### Favourites
+
 - Favourite restaurants list
 - Favourite dishes list
 - Favourite shops list (pandamart/shops)
@@ -192,6 +195,7 @@
 - Quick access to favourites tab
 
 ### Vouchers & Promos
+
 - My vouchers list
 - Available promo codes
 - Expired vouchers
@@ -199,6 +203,7 @@
 - Pandapro voucher section
 
 ### Subscriptions
+
 - Pandapro subscription management
   - View current plan
   - Upgrade/downgrade plan
@@ -211,6 +216,7 @@
 ## 4. Customer App — Order Tracking
 
 ### Real-Time Tracking
+
 - Order placed confirmation screen
 - Order accepted by restaurant notification
 - Food being prepared status
@@ -228,6 +234,7 @@
 - Push notification at each status change
 
 ### Post-Delivery
+
 - Delivered confirmation
 - Rate your rider (thumbs up/down)
 - Tip rider (post-delivery option)
@@ -238,6 +245,7 @@
 - Contact support
 
 ### Delivery Statuses
+
 - Order placed
 - Restaurant confirmed
 - Preparing food
@@ -253,6 +261,7 @@
 ## 5. Customer App — Notifications
 
 ### Order Notifications
+
 - Order confirmation
 - Order accepted by restaurant
 - Food is being prepared
@@ -263,6 +272,7 @@
 - Order delayed notification
 
 ### Promotional Notifications
+
 - Personalised deals and offers
 - Flash sale alerts
 - Free delivery promotion
@@ -274,6 +284,7 @@
 - Re-engagement push (inactive users)
 
 ### Account Notifications
+
 - Payment successful
 - Refund processed
 - Subscription renewal notice
@@ -288,6 +299,7 @@
 ## 6. Customer App — Accessibility & UX
 
 ### Accessibility
+
 - Screen reader compatible (VoiceOver/TalkBack)
 - Font size adjustment / large text mode
 - High contrast mode
@@ -304,6 +316,7 @@
 - Lao (Laos)
 
 ### UI/UX
+
 - Dark mode / light mode
 - Bottom tab navigation (Home, Search, Orders, Account)
 - Swipe gestures for quick actions
@@ -319,6 +332,7 @@
 - 3-tap ordering flow
 
 ### Device & Platform
+
 - iOS app (iPhone/iPad)
 - Android app
 - Huawei AppGallery availability
@@ -337,6 +351,7 @@
 ## 7. Pandapro Subscription
 
 ### Plans & Pricing
+
 - Monthly subscription plan
 - 6-month subscription plan (discounted)
 - Annual plan (market-specific)
@@ -348,6 +363,7 @@
 - Cancel anytime (effective next renewal)
 
 ### Benefits — Food Delivery
+
 - Unlimited free delivery (restaurant orders)
 - Free delivery cap (e.g. capped at HK$59/PhP49)
 - 25% off food delivery at selected restaurants (HK)
@@ -357,6 +373,7 @@
 - Surprise perks / vouchers each billing cycle
 
 ### Benefits — Pandamart & Grocery
+
 - Free delivery on pandamart (min. HK$280)
 - Free delivery on pandamart XL (min. HK$400)
 - Free delivery on foodpanda mall (min. HK$280)
@@ -365,11 +382,13 @@
 - Pick-up discount (extra 5% off, no minimum)
 
 ### Benefits — Ride-Hailing Partnerships
+
 - Exclusive ride discounts (TADA, Bolt, LINE GO)
 - Up to 70% savings across rides + meals + groceries
 - Multi-market partnerships (SG, MY, TW)
 
 ### Benefits — Additional
+
 - HSBC credit card 5% PandaPay cashback (HK, weekends)
 - Co-branded credit card perks (CTBC Taiwan)
 - Voucher allocation each billing cycle
@@ -378,6 +397,7 @@
 - Pro member badge in app
 
 ### Management
+
 - Subscribe via app or website
 - View remaining benefits
 - Benefits auto-applied at checkout
@@ -391,6 +411,7 @@
 ## 8. Pandamart / Quick Commerce
 
 ### Store Network
+
 - 200+ dark stores (Malaysia)
 - 150+ pandamarts across 40 cities (as of 2021)
 - 8 markets (SG, MY, TH, TW, HK, BD, PK, PH)
@@ -404,6 +425,7 @@
 - Dark stores in Metro Manila, Baguio, Cebu, Davao
 
 ### Product Categories
+
 - Fresh produce (fruits, vegetables)
 - Fresh meat and seafood
 - Frozen and chilled food
@@ -425,6 +447,7 @@
 - Plant-based and sustainably-grown products
 
 ### Brands & Assortments
+
 - 1,300+ international and local brands (HK)
 - 10,000+ products (HK)
 - 4,000+ products per store
@@ -435,6 +458,7 @@
 - FairPrice Xpress, Cheers (SG)
 
 ### Features
+
 - 15-25 minute average delivery
 - 1-hour delivery window
 - 24/7 ordering
@@ -442,22 +466,33 @@
 - Dedicated pickers in dark stores
 - Inventory management system (real-time)
 - Demand forecasting for stock
+- Hyperlocal demand trend assortment planning (per neighbourhood)
+- Automated storage and retrieval system (robots + AI in SG dark stores)
+- AI for demand forecasting, inventory management and order processing
 - Picking optimisation (store layout for efficiency)
 - Item replacement when out of stock
 - Self pick-up option (HK, MY, SG — O2O)
+- Self pick-up for extra savings (skip the queue)
 - Bulk ordering
 - Scheduled delivery option
 - pandamart-specific promo codes
+- Kiasu Pasar Report — consumer insights report (SG Jan 2026)
 
 ---
 
 ## 9. Pandago / Logistics-as-a-Service
 
-### Consumer (B2C)
+### Consumer (B2C / C2C)
+
 - Request rider from foodpanda app
+- C2C parcel delivery (sender to recipient, Taiwan 2023)
 - Real-time tracking
 - 60-minute delivery window
 - 24/7 availability
+- 5-minute delivery matching time (Taiwan — fastest in industry)
+- 100,000+ registered delivery partners (Taiwan)
+- No prepaid deposit required (pay-per-order)
+- Insurance coverage for lost/stolen/damaged packages
 - Item weight limit: 5kg (SG), 20kg (PH)
 - Item size limit: must fit delivery bag
 - Per-kilometre distance-based fee
@@ -467,6 +502,7 @@
 - Tracking link to share with recipient
 
 ### Business (B2B)
+
 - pandago web portal (pandago.sg, pandago.ph)
 - pandago API (system-to-system integration)
 - Godroid integration
@@ -488,6 +524,7 @@
 - Service for all businesses (not just foodpanda partners)
 
 ### API Features
+
 - Add Order endpoint
 - Estimate Order Fee
 - Estimate Order Time
@@ -501,6 +538,7 @@
 ## 10. Shops / Marketplace
 
 ### Categories
+
 - Foodpanda Shops (non-food retail)
 - Convenience stores
 - Pharmacies
@@ -513,6 +551,7 @@
 - Stationery/office supplies
 
 ### Features
+
 - Individual shop pages
 - Shop ratings and reviews
 - Product search within shop
@@ -530,6 +569,7 @@
 ## 11. Pick-Up & Dine-In
 
 ### Pick-Up
+
 - Browse restaurants for pick-up
 - Minimum 15% off pick-up orders (no voucher needed)
 - No delivery fees
@@ -545,9 +585,15 @@
 - Extra savings on grocery pick-up
 
 ### Dine-In
+
 - Dine-in promotions at partner restaurants
 - Dine-in feature in app (emerging)
 - O2O commerce bridge
+- Pandapro-exclusive access to dine-in offers
+- QR code scan at restaurant to verify and redeem offer
+- 1-for-1 dine-in offers
+- Up to 30% off full menu
+- 3 offers per restaurant per month limit (pandapro members)
 - Favourites by foodpanda (satellite kitchen + dine-in hybrid)
   - Woodlands, Singapore (2018)
   - Pick-up + dine-in + delivery concept
@@ -558,6 +604,7 @@
 ## 12. Group Order & Corporate/B2B
 
 ### Group Order
+
 - Invite link sharing (WhatsApp, LINE, etc.)
 - Each person orders from own device
 - Host pays all at once
@@ -568,6 +615,7 @@
 - Group order session management
 
 ### FoodPanda for Business (Corporate)
+
 - Dedicated corporate dashboard
 - Per-employee daily allowance setting
 - Team management and access control
@@ -588,6 +636,7 @@
 ## 13. Merchant / Panda Partner Dashboard
 
 ### Dashboard
+
 - Sales overview dashboard
 - Real-time order tracking
 - Order management
@@ -598,6 +647,7 @@
 - Peak hours analysis
 
 ### Menu Management
+
 - Add new menu items
 - Edit menu items (name, description, price, photo)
 - Remove menu items
@@ -613,6 +663,7 @@
 - Holiday closure schedule
 
 ### Order Management
+
 - View incoming orders (real-time)
 - Accept/decline orders
 - Mark order as preparing
@@ -627,6 +678,7 @@
 - Reject order with reason
 
 ### Growth Tools
+
 - AI-driven recommendations for menu optimisation
 - Data insights dashboard
 - Customer behaviour analytics
@@ -637,14 +689,17 @@
 - Peak hour identification
 
 ### Onboarding & Support
+
 - Dedicated account manager (for selected tiers)
 - Streamlined onboarding process
-- Restaurant Transformation Advisory Team (Taiwan, with CDRI/AMT)
-- Consultant-led coaching
-- Personalised support
+- Restaurant Transformation Advisory Team (Taiwan — with CDRI, AMT)
+  - Consultant-led coaching
+  - Data analysis of 1B+ orders
+  - Tailored digital action plans
 - Training and education
 
 ### Merchant Financial Access
+
 - Funding Societies partnership (MY, BD)
 - AEON Bank financing (MY)
 - Bank and payment partner collaborations (HK)
@@ -652,6 +707,7 @@
 - Working capital programmes
 
 ### Merchants Campaigns
+
 - Local Heroes campaign
 - Merchant awards and recognition
 - Appreciation events
@@ -659,12 +715,19 @@
 - Panda Ads integration
 - Promotional tools (discounts, coupons)
 - Commission structure management
+- Merchant Care Programme (expanded to 10 APAC markets in 2026)
+  - Personalised merchant support
+  - Growth tools and coaching
+  - Financing partnerships (Funding Societies, AEON Bank — MY/BD)
+  - Merchant recognition programmes
+- Data insights dashboards (AI-powered recommendations, retail media integrations)
 
 ---
 
 ## 14. Partner API & POS Integration
 
 ### Partner API v2 (Redocly)
+
 - Catalog Management
   - Product availability and price sync
   - Real-time catalog updates
@@ -682,6 +745,7 @@
   - Order history
 
 ### POS Integration
+
 - Order dispatch to existing POS system
 - Kitchen display system integration
 - Order Management API (two modes)
@@ -695,12 +759,14 @@
 - No duplicate menu editing (POS overrides portal)
 
 ### SFTP Integration
+
 - Catalog upload via SFTP
 - Promotion upload via SFTP
 - Batch product updates
 - Automated file processing
 
 ### Delivery Hero POS Middleware API
+
 - Middleware layer for POS connectivity
 - Standardised order format
 - Multi-market POS support
@@ -710,6 +776,7 @@
 ## 15. Panda Ads / AdTech
 
 ### In-App Display Ads
+
 - Homescreen ad (full takeover or banner)
 - Order tracking page ad
 - Shopping ad (pandamart/shops)
@@ -721,6 +788,7 @@
 - In-app media placements
 
 ### Off-App Advertising
+
 - Marketing channels (email, SMS, push)
 - Rider bag ads (O2O — physical branding on delivery bags)
 - Product sampling campaigns (in-bag samples)
@@ -732,6 +800,7 @@
   - Website display
 
 ### Targeting & Analytics
+
 - First-party purchase data targeting
 - Audience segmentation by purchase history
 - Demographic targeting (age, location)
@@ -745,6 +814,7 @@
 - ROAS discipline
 
 ### Partnerships
+
 - GroupM partnership (7 markets)
 - The Trade Desk (7 markets — HK, MY, PK, PH, SG, TW, TH)
 - Coca-Cola campaign
@@ -754,6 +824,7 @@
 - Full-funnel marketing solutions
 
 ### Self-Serve Tools
+
 - Media kit generator (self-serve tool)
 - Marketer personality quiz
 - Campaign management portal
@@ -763,6 +834,7 @@
 ## 16. Rider App — Onboarding & Sessions
 
 ### Registration
+
 - Download rider app (iOS/Android)
 - Create profile
 - Upload required documents
@@ -777,6 +849,7 @@
 - Minimum age: 18 (motorcycle), 16 (walker/cyclist HK)
 
 ### Requirements
+
 - Smartphone (iOS 11.2+ / Android 6.0+)
 - iOS 15+ from Jan 2024 (HK rider app)
 - Vehicle type options
@@ -789,6 +862,7 @@
 - Rider insurance enrolment
 
 ### Session Management
+
 - Go online/offline toggle
 - Session start confirmation
 - Session end summary
@@ -798,8 +872,13 @@
 - Zone/area selection
 - Schedule/booking system (some markets)
 - Shift allocation (scheduled markets)
+- Score-based Scheduling model (HK — rider performance affects shift access)
+- On-demand Payout (HK — instant/on-request payout)
+- Extended delivery (rider opt-in for longer-distance orders)
+- Cross-zone delivery (rider delivery across zone boundaries)
 
 ### Onboarding Support
+
 - Rider Guide section
 - Rider Support section
 - Training materials
@@ -808,12 +887,15 @@
 - Rider equipment ordering (door-to-door delivery)
 - New joiner fee page (HK)
 - Referral fees page (HK)
+- Rider Compliance page (penalties, fines, demerit points for violations)
+- E-Bikes (PAB) compliance and guidelines
 
 ---
 
 ## 17. Rider App — Delivery & Earnings
 
 ### Order Acceptance
+
 - Incoming order request notification
 - Restaurant name and location display
 - Customer delivery address display
@@ -825,6 +907,7 @@
 - Batch order assignment
 
 ### Navigation
+
 - In-app navigation (turn-by-turn)
 - Google Maps/Apple Maps integration
 - Restaurant location marker
@@ -833,6 +916,7 @@
 - Real-time traffic data
 
 ### Earnings
+
 - Per-delivery base fee
 - Distance-based fee
 - Time-based fee (peak hours)
@@ -849,6 +933,7 @@
 - New joiner incentive
 
 ### Delivery Flow
+
 - Navigate to restaurant
 - Order pickup confirmation
 - Order items verification
@@ -862,6 +947,7 @@
 - Return order flow (if delivery fails)
 
 ### Rider-Only Features
+
 - Pandarider insurance portal
 - Bamboo Rewards (discounts on foodpanda items)
 - Personal Accident Insurance (free, while delivering)
@@ -877,6 +963,7 @@
 ## 18. Rider App — Safety & Panda Hearts
 
 ### Panda Hearts Programme (5 Pillars)
+
 - **Safety**
   - Rider safety training
   - AI-based risk detection (speed, braking, acceleration)
@@ -884,6 +971,8 @@
   - Telematics data (SG, MY)
   - Motion-based risk signals
   - Rider Safety Month (SG, with Traffic Police)
+  - PandaSafe programme (Malaysia — with Ministry of Transport, Aug 2025)
+  - Helmet distribution initiative (Pakistan 2026 road safety campaign)
   - Safety workshops (BD, Cambodia, Pakistan)
   - Traffic rule refreshers (BD, Cambodia, Pakistan)
   - Safety syllabus + nationwide talks (Malaysia)
@@ -919,6 +1008,7 @@
   - Phone/data plan subsidies (some markets)
 
 ### Safety Technology
+
 - Localised data ingestion via encrypted SDKs
 - Centralised data lake with regional partitions
 - Stream processing for real-time anomaly detection
@@ -933,6 +1023,7 @@
 ## 19. Rider App — Bamboo Rewards & Panda League
 
 ### Bamboo Rewards
+
 - Earn Bamboo points per order
 - Discounts on foodpanda items using points
 - Redeem points for foodpanda orders
@@ -940,6 +1031,7 @@
 - Point balance view in app
 
 ### Panda League (Tiers)
+
 - Diamond tier (highest)
 - Platinum tier
 - Gold tier
@@ -953,6 +1045,7 @@
 - League seasonal reset
 
 ### Rider Referral
+
 - Refer a friend programme
 - Referral fee per new rider
 - New joiner incentive
@@ -963,6 +1056,7 @@
 ## 20. Platform — AI Dispatch & Operations
 
 ### Dispatch Engine
+
 - AI-based rider dispatch
 - Order batching (multiple orders per rider)
 - Route optimisation algorithm
@@ -972,6 +1066,7 @@
 - Dynamic dispatch zone management
 
 ### Demand & Supply Management
+
 - Heatmaps of micro-district demand
 - Supply/demand balancing
 - Surge pricing (some markets)
@@ -980,6 +1075,7 @@
 - Promotional intensity per zone
 
 ### AI/ML Features
+
 - AI-driven personalised recommendations
 - Order accuracy boost (30%)
 - User preference prediction
@@ -995,6 +1091,7 @@
 - Automated moderation of reviews
 
 ### Real-Time Operations
+
 - Order status tracking system
 - Live rider GPS streaming
 - Real-time inventory management
@@ -1008,6 +1105,7 @@
 ## 21. Platform — Dark Store Operations
 
 ### Dark Store Design
+
 - Purpose-built for delivery (no walk-in retail)
 - Inventory arrangement for picking efficiency
 - Climate-controlled zones (fresh, frozen, ambient)
@@ -1017,6 +1115,7 @@
 - 200+ dark stores (MY), 150+ across APAC
 
 ### Picking & Packing
+
 - Dedicated pickers (not riders)
 - Optimised picking routes within store
 - Barcode/QR scanning for item verification
@@ -1027,6 +1126,7 @@
 - Ready-to-deliver staging area
 
 ### Inventory Management
+
 - Real-time stock tracking
 - Automated reorder triggers
 - Supplier integration
@@ -1042,6 +1142,7 @@
 ## 22. Platform — Data, Analytics & Compliance
 
 ### Data Infrastructure
+
 - Centralised data lake
 - Regional data partitions (GDPR, PDPA compliance)
 - Localised ingestion pipelines per market
@@ -1052,6 +1153,7 @@
 - Anonymised data for advertising
 
 ### Analytics
+
 - Sales analytics
 - Customer behaviour analytics
 - Merchant performance analytics
@@ -1064,6 +1166,7 @@
 - Customer lifetime value modelling
 
 ### Compliance
+
 - GDPR compliance (European operations)
 - PDPA compliance (Singapore, Malaysia)
 - Local data protection regulations per market
@@ -1080,6 +1183,7 @@
 ## 23. Payment Methods & Financial
 
 ### Online Payments
+
 - Credit cards (Visa, Mastercard, Amex)
 - Debit cards
 - PandaPay wallet (foodpanda digital wallet)
@@ -1104,10 +1208,12 @@
 - Bank transfer
 
 ### Offline Payments
+
 - Cash on delivery (COD)
 - Card on delivery (selected markets)
 
 ### Payment Features
+
 - PCI DSS certified processing
 - Single-click reorder payment
 - Auto-payment on delivery
@@ -1120,6 +1226,7 @@
 - Transaction history
 
 ### Financial Partnerships
+
 - Visa (MOU June 2023 — payment innovation)
 - Fiserv (primary acquirer, Oct 2024)
 - Cybersource (Visa solution, Jul 2024)
@@ -1129,6 +1236,7 @@
 - AEON Bank (merchant financing, MY)
 
 ### Fees for Customers
+
 - Delivery fee (distance-based)
 - Platform fee ($0.40 → $0.60 SG, Jan 2025)
 - Small order fee (below minimum)
@@ -1138,6 +1246,7 @@
 - VAT/tax
 
 ### Merchant Commission
+
 - Commission per order
 - Registration fee
 - Advertising costs (Panda Ads)
@@ -1150,6 +1259,7 @@
 ## 24. Promotions, Vouchers & Loyalty
 
 ### PandaPoints Loyalty Programme
+
 - Earn points per order
 - 3.4 million members
 - 22% increase in repeat orders
@@ -1159,6 +1269,7 @@
   - Redeem at Cold Storage, Giant, 7-Eleven, Guardian
 
 ### Voucher System
+
 - Promo codes
 - Auto-applied vouchers
 - New user discount (50% off first order)
@@ -1176,6 +1287,7 @@
 - Seasonal campaign vouchers
 
 ### Promo Mechanics
+
 - Free delivery promotions
 - Bundled deals
 - Buy-one-get-one (BOGO)
@@ -1188,6 +1300,7 @@
 - EXPRESS20 / FLASH30 promo codes
 
 ### Gamification
+
 - Panda League tiers
 - Quest targets (ride)
 - Boosted order bonuses
@@ -1200,6 +1313,7 @@
 ## 25. Marketing, CRM & Campaigns
 
 ### CRM & Lifecycle
+
 - Braze CRM platform
 - Push notification campaigns
 - SMS marketing
@@ -1213,6 +1327,7 @@
 - Abandoned cart recovery
 
 ### Campaigns
+
 - Make Life Delicious regional campaign (SG, MY, PH, 2026)
 - Global brand campaign with refreshed visual identity
 - High-energy consumer activations
@@ -1225,6 +1340,7 @@
 - Sports event campaigns (World Cup)
 
 ### Media & Social
+
 - Facebook presence (per market)
 - Instagram presence (per market)
 - TikTok presence (per market)
@@ -1234,6 +1350,7 @@
 - WhatsApp business
 
 ### Customer Engagement
+
 - Push notification categories (order, promo, account)
 - In-app notification centre
 - Personalised daily deals
@@ -1244,6 +1361,7 @@
 - User-generated content
 
 ### Merchant Marketing
+
 - Co-marketing with brands
 - Local Heroes campaigns
 - Merchant awards
@@ -1251,6 +1369,7 @@
 - Offline activations
 
 ### Heatmaps
+
 - Micro-district demand heatmaps
 - Restaurant supply alignment heatmaps
 - Promo intensity allocation per district
@@ -1261,6 +1380,7 @@
 ## 26. Brand, History & Sustainability
 
 ### Brand
+
 - Pau-Pau mascot (anthropomorphic panda, 2022)
   - Brand ambassador across Asia
   - Champions empowerment and sustainability
@@ -1270,6 +1390,7 @@
 - Make Life Delicious brand platform
 
 ### History Timeline
+
 - 26 Mar 2012: Founded in Singapore by Lukas Nagel & Rico Wyder
 - 2012-2013: Expanded across Asia
 - 2013: Launched in Bangladesh, Romania
@@ -1312,6 +1433,7 @@
 - 2026: 24/7 pandamart (PH)
 
 ### Company Facts
+
 - Subsidiary of Delivery Hero
 - CEO: John Fang (since Oct 2023)
 - APAC leadership: Kiren Tanna, Christian Mischler, Nadine Grau Paulin
@@ -1328,6 +1450,7 @@
 - Legal name (PH): Delivery Hero Philippines, Inc.
 
 ### Overseas Markets — Former
+
 - Azerbaijan (2014-2015)
 - Brunei (2014-2018)
 - Bulgaria (2014-2021, → Glovo)
@@ -1348,6 +1471,7 @@
 - Ukraine (2013-2015)
 
 ### Sustainability
+
 - World's first cultured meat delivery
 - Sustainable packaging pilot
 - Less plastic cutlery initiative
@@ -1365,6 +1489,7 @@
   - Neolix
 
 ### Social Impact
+
 - pandapurpose programme
 - Home Chefs initiative (8,000-9,000 home chefs, target 100,000)
 - Home Chefs in Pakistan, Bangladesh, Malaysia
@@ -1384,38 +1509,45 @@
 ## 27. Controversies & Challenges
 
 ### Thailand Boycott (2021)
+
 - Identified as advertiser on Nation TV (pro-establishment) → Aug 2020 boycott
 - Tweeted dismissal of rider seen at protest → 2M accounts deleted overnight
 - Restaurants joined boycott
 - Company apologised, supported free speech, no dismissal
 
 ### Malaysia Hidden Fees (Oct 2021)
+
 - Vendors alleged excessively high commission rates
 - Hidden fees leaving some sellers with zero profit
 - 70+ Facebook screenshots and invoices surfaced
 - Several vendors terminated accounts
 
 ### Philippines Rider Protests (Jul 2021)
+
 - Unfair wage policies alleged
 - 30 riders suspended for 10 years
 - Company blamed technical glitch, apologised
 - Rider software issues
 
 ### Hong Kong Rider Strike (Nov 2021)
+
 - Workers denounced exaggerated monthly income promises
 - Police called to disperse strikers
 
 ### India Malpractice Allegations (2015)
+
 - Non-payments to restaurants
 - Fake listings
 - Laid off 300+ employees
 - Ola acquisition (2017), suspended by 2019
 
 ### Taiwan Buyout Blocked (Dec 2024)
+
 - Uber $950M buyout blocked by Taiwanese regulators
 - Antitrust concerns
 
 ### Rider Classification
+
 - Riders classified as independent contractors
 - Legal challenges in multiple countries
 - Foodora shutdown in Australia/Canada over worker classification
@@ -1425,6 +1557,7 @@
 ## 28. Metrics & KPIs
 
 ### Company Scale
+
 - Operating markets: 11 (active)
 - Cities: 400+
 - Employees: ~17,000
@@ -1445,26 +1578,31 @@
 - 19M app downloads (Malaysia)
 
 ### Subscription Metrics
+
 - Pandapro members: 3.4M
 - Repeat order increase: 22% (PandaPoints)
 - Pandapro membership growth: 20% YoY (Taiwan)
 
 ### Payment Metrics
+
 - Payment success rate increase: 3.3% (with Cybersource)
 - Customers using mobile payment: 70% (Taiwan)
 - CTBC Bank customers: 30% (Taiwan data)
 
 ### Rider Safety
+
 - Accident reduction: 30% (APAC, since 2023)
 - Rider safety satisfaction: 46.4% → 51.7% (SG)
 - Delivery safety rate: 99.99% (Taiwan)
 
 ### Market Share
+
 - 71% of consumers list foodpanda as most used platform (Taiwan study)
 - Asia's largest food and delivery platform (outside China)
 - Largest quick-commerce network in Asia (pandamart)
 
 ### Financial (Delivery Hero Parent)
+
 - GMV: €49.2B (FY2025, 9% YoY)
 - Revenue: €14.8B (23% growth)
 - EBITDA positive: 2023+ (€253.6M in 2023)
@@ -1475,37 +1613,37 @@
 
 ## Index — Quick Navigation
 
-| Section | Domain | Features |
-|:-------:|--------|:--------:|
-| 1 | Customer App — Discovery & Browse | ~80 |
-| 2 | Customer App — Cart & Checkout | ~70 |
-| 3 | Customer App — Account & Profile | ~50 |
-| 4 | Customer App — Order Tracking | ~40 |
-| 5 | Customer App — Notifications | ~30 |
-| 6 | Customer App — Accessibility & UX | ~35 |
-| 7 | Pandapro Subscription | ~55 |
-| 8 | Pandamart / Quick Commerce | ~80 |
-| 9 | Pandago / Logistics-as-a-Service | ~40 |
-| 10 | Shops / Marketplace | ~25 |
-| 11 | Pick-Up & Dine-In | ~30 |
-| 12 | Group Order & Corporate/B2B | ~40 |
-| 13 | Merchant / Panda Partner Dashboard | ~90 |
-| 14 | Partner API & POS Integration | ~50 |
-| 15 | Panda Ads / AdTech | ~50 |
-| 16 | Rider App — Onboarding & Sessions | ~60 |
-| 17 | Rider App — Delivery & Earnings | ~55 |
-| 18 | Rider App — Safety & Panda Hearts | ~45 |
-| 19 | Rider App — Bamboo Rewards & League | ~30 |
-| 20 | Platform — AI Dispatch & Operations | ~40 |
-| 21 | Platform — Dark Store Operations | ~35 |
-| 22 | Platform — Data & Compliance | ~25 |
-| 23 | Payment Methods & Financial | ~50 |
-| 24 | Promotions, Vouchers & Loyalty | ~45 |
-| 25 | Marketing, CRM & Campaigns | ~35 |
-| 26 | Brand, History & Sustainability | ~40 |
-| 27 | Controversies & Challenges | ~15 |
-| 28 | Metrics & KPIs | ~25 |
-| | **Total** | **~1,180+** |
+| Section | Domain                              |  Features   |
+| :-----: | ----------------------------------- | :---------: |
+|    1    | Customer App — Discovery & Browse   |     ~80     |
+|    2    | Customer App — Cart & Checkout      |     ~70     |
+|    3    | Customer App — Account & Profile    |     ~50     |
+|    4    | Customer App — Order Tracking       |     ~40     |
+|    5    | Customer App — Notifications        |     ~30     |
+|    6    | Customer App — Accessibility & UX   |     ~35     |
+|    7    | Pandapro Subscription               |     ~55     |
+|    8    | Pandamart / Quick Commerce          |     ~80     |
+|    9    | Pandago / Logistics-as-a-Service    |     ~40     |
+|   10    | Shops / Marketplace                 |     ~25     |
+|   11    | Pick-Up & Dine-In                   |     ~30     |
+|   12    | Group Order & Corporate/B2B         |     ~40     |
+|   13    | Merchant / Panda Partner Dashboard  |     ~90     |
+|   14    | Partner API & POS Integration       |     ~50     |
+|   15    | Panda Ads / AdTech                  |     ~50     |
+|   16    | Rider App — Onboarding & Sessions   |     ~60     |
+|   17    | Rider App — Delivery & Earnings     |     ~55     |
+|   18    | Rider App — Safety & Panda Hearts   |     ~45     |
+|   19    | Rider App — Bamboo Rewards & League |     ~30     |
+|   20    | Platform — AI Dispatch & Operations |     ~40     |
+|   21    | Platform — Dark Store Operations    |     ~35     |
+|   22    | Platform — Data & Compliance        |     ~25     |
+|   23    | Payment Methods & Financial         |     ~50     |
+|   24    | Promotions, Vouchers & Loyalty      |     ~45     |
+|   25    | Marketing, CRM & Campaigns          |     ~35     |
+|   26    | Brand, History & Sustainability     |     ~40     |
+|   27    | Controversies & Challenges          |     ~15     |
+|   28    | Metrics & KPIs                      |     ~25     |
+|         | **Total**                           | **~1,180+** |
 
 ---
 
