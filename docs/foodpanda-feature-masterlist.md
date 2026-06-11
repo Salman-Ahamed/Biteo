@@ -1,4 +1,35 @@
-# FoodPanda Feature Masterlist
+# FoodPanda Feature Masterlist — Index
+
+1. [Customer App — Discovery & Browse](#1-customer-app-discovery-browse)
+2. [Customer App — Cart & Checkout](#2-customer-app-cart-checkout)
+3. [Customer App — Account & Profile](#3-customer-app-account-profile)
+4. [Customer App — Order Tracking](#4-customer-app-order-tracking)
+5. [Customer App — Notifications](#5-customer-app-notifications)
+6. [Customer App — Accessibility & UX](#6-customer-app-accessibility-ux)
+7. [Pandapro Subscription](#7-pandapro-subscription)
+8. [Pandamart / Quick Commerce](#8-pandamart-quick-commerce)
+9. [Pandago / Logistics-as-a-Service](#9-pandago-logistics-as-a-service)
+10. [Shops / Marketplace](#10-shops-marketplace)
+11. [Pick-Up & Dine-In](#11-pick-up-dine-in)
+12. [Group Order & Corporate/B2B](#12-group-order-corporateb2b)
+13. [Merchant / Panda Partner Dashboard](#13-merchant-panda-partner-dashboard)
+14. [Partner API & POS Integration](#14-partner-api-pos-integration)
+15. [Panda Ads / AdTech](#15-panda-ads-adtech)
+16. [Rider App — Onboarding & Sessions](#16-rider-app-onboarding-sessions)
+17. [Rider App — Delivery & Earnings](#17-rider-app-delivery-earnings)
+18. [Rider App — Safety & Panda Hearts](#18-rider-app-safety-panda-hearts)
+19. [Rider App — Bamboo Rewards & League](#19-rider-app-bamboo-rewards-league)
+20. [Platform — AI Dispatch & Operations](#20-platform-ai-dispatch-operations)
+21. [Platform — Dark Store Operations](#21-platform-dark-store-operations)
+22. [Platform — Data & Compliance](#22-platform-data-compliance)
+23. [Payment Methods & Financial](#23-payment-methods-financial)
+24. [Promotions, Vouchers & Loyalty](#24-promotions-vouchers-loyalty)
+25. [Marketing, CRM & Campaigns](#25-marketing-crm-campaigns)
+26. [Brand, History & Sustainability](#26-brand-history-sustainability)
+27. [Controversies & Challenges](#27-controversies-challenges)
+28. [Metrics & KPIs](#28-metrics-kpis)
+
+---
 
 ## 1. Customer App — Discovery & Browse
 
@@ -1637,42 +1668,6 @@
 - EBITDA positive: 2023+ (€253.6M in 2023)
 - Dmarts: ~800
 - Countries: ~65
-
----
-
-## Index — Quick Navigation
-
-| Section | Domain                              |  Features   |
-| :-----: | ----------------------------------- | :---------: |
-|    1    | Customer App — Discovery & Browse   |     ~80     |
-|    2    | Customer App — Cart & Checkout      |     ~70     |
-|    3    | Customer App — Account & Profile    |     ~50     |
-|    4    | Customer App — Order Tracking       |     ~40     |
-|    5    | Customer App — Notifications        |     ~30     |
-|    6    | Customer App — Accessibility & UX   |     ~35     |
-|    7    | Pandapro Subscription               |     ~55     |
-|    8    | Pandamart / Quick Commerce          |     ~80     |
-|    9    | Pandago / Logistics-as-a-Service    |     ~40     |
-|   10    | Shops / Marketplace                 |     ~25     |
-|   11    | Pick-Up & Dine-In                   |     ~30     |
-|   12    | Group Order & Corporate/B2B         |     ~40     |
-|   13    | Merchant / Panda Partner Dashboard  |     ~90     |
-|   14    | Partner API & POS Integration       |     ~50     |
-|   15    | Panda Ads / AdTech                  |     ~50     |
-|   16    | Rider App — Onboarding & Sessions   |     ~60     |
-|   17    | Rider App — Delivery & Earnings     |     ~55     |
-|   18    | Rider App — Safety & Panda Hearts   |     ~45     |
-|   19    | Rider App — Bamboo Rewards & League |     ~30     |
-|   20    | Platform — AI Dispatch & Operations |     ~40     |
-|   21    | Platform — Dark Store Operations    |     ~35     |
-|   22    | Platform — Data & Compliance        |     ~25     |
-|   23    | Payment Methods & Financial         |     ~50     |
-|   24    | Promotions, Vouchers & Loyalty      |     ~45     |
-|   25    | Marketing, CRM & Campaigns          |     ~35     |
-|   26    | Brand, History & Sustainability     |     ~40     |
-|   27    | Controversies & Challenges          |     ~15     |
-|   28    | Metrics & KPIs                      |     ~25     |
-|         | **Total**                           | **~1,180+** |
 
 ---
 
