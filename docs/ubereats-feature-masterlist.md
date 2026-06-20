@@ -1041,6 +1041,13 @@
 - In-car tablet ads (JourneyTV, JourneyTV Presents)
 - Carousel banner ads
 - Sponsored product listings in grocery
+- Home screen ad (full takeover or banner)
+- Order tracking page ad placement
+- Shopping ad (grocery/retail)
+- Full-page interstitial ad
+- Cart upsell placement (before checkout)
+- Payment method promotion at checkout
+- In-app media placements
 
 ### Off-App Advertising
 
@@ -1070,6 +1077,7 @@
   - Privacy-compliant measurement
 - Adelaide + Kantar attention metric (Oct 2025)
 - In-store traffic measurement
+- Add-to-cart rate measurement
 
 ### Self-Serve Tools
 
@@ -1083,6 +1091,7 @@
 - Ads APIs for campaign management (Jun 2026)
   - POS integration for ad management
   - CPG brand direct access
+- Media kit generator
 
 ### Partnerships
 
@@ -1132,6 +1141,7 @@
 - Insurance coverage
 - Delivery bag (high-visibility Uber Eats branding)
 - Safety equipment
+- Rider insurance enrolment
 - Tax information submission
 
 ### Session Management
@@ -1150,6 +1160,11 @@
 - Trip planner at pickup (batch order management)
 - Verification screen at pickup (item/order verification)
 - Cross-zone delivery (courier accepts deliveries across zone boundaries)
+- Minimum session hours (select markets)
+- Schedule/booking system (select markets)
+- Shift allocation (scheduled markets)
+- Score-based scheduling (rider performance affects shift access)
+- Extended delivery opt-in (longer-distance orders)
 
 ### Onboarding Support
 
@@ -1160,6 +1175,11 @@
 - Support chat/phone
 - Referral programme (refer a friend)
 - Rider compliance page (penalties, fines, demerit points for violations)
+- Traffic rule refreshers
+- Rider equipment ordering portal
+- New joiner fee information page
+- Referral fees information page
+- E-bike compliance and guidelines
 
 ---
 
@@ -1207,6 +1227,8 @@
 - Uber Pro Card cashback (gas)
 - Instant pay/on-demand payout (some markets)
 - Weekly direct deposit
+- Weekly earnings targets/challenges
+- Monthly earnings report
 
 ### Delivery Flow
 
@@ -1224,6 +1246,7 @@
 - Return order flow (if delivery fails)
 - Single drop-off flow (streamlined, Oct 2025)
 - Drop-off problem resolution screen
+- Proof of delivery via QR code
 
 ### Courier-Only Features
 
@@ -1237,6 +1260,9 @@
 - Refer a friend programme
 - Help centre
 - Driver community/social
+- Rider insurance portal
+- Rider perks and deals page
+- Rider events and happenings page
 
 ---
 
@@ -1773,6 +1799,7 @@
 - Tenure-based offers
 - Order history-based targeting
 - Abandoned cart recovery
+- Braze CRM platform integration
 - Uber One member lifecycle (free trial → paid conversion)
 - Re-engagement for lapsed users
 
@@ -1789,6 +1816,9 @@
 - Travel Concierge mode (curated local recs, hotel room service delivery, forgotten items delivery, GO-GET Apr 2026)
 - Women rider initiatives
 - Offline activations (physical marketing events)
+- Short-form video content strategy (TikTok, Reels)
+- Seasonal cuisine narratives
+- Payday promotions
 
 ### Media & Social
 
@@ -1825,6 +1855,13 @@
 - Insights hub (articles, guides)
 - Merchant awards/recognition
 - Promotion management tools
+
+### Heatmaps
+
+- Micro-district demand heatmaps for marketing allocation
+- Restaurant supply alignment heatmaps
+- Promo intensity allocation per district
+- Rider allocation per zone for campaigns
 
 ### Cross-Platform Marketing
 
@@ -1935,12 +1972,16 @@
 - Greener packaging grants (with Visa, $1M, Jan 2023)
 - Green Packaging Badge (labels eco-friendly packaging on restaurant pages)
 - No cutlery opt-out (app toggle, some markets)
+- Green Mode (opt out single-use plastics for cashback)
+- Less plastic cutlery initiative
+- Zero waste kitchen partnerships
 - Plant-based and sustainably-grown product promotion
 - Electric vehicle partnerships (EV charging discounts)
 - Zoomo partnership (e-bike leasing for delivery persons, US/AU/UK)
 - Zenion partnership (e-motorcycle leasing for delivery persons, select markets)
 - 3,000+ e-motorcycles deployed via partnerships
 - $800M Green Future commitment (sustainability investment)
+- Carbon tracking (limited markets)
 - Carbon offset programme (limited markets)
 - Reduced packaging waste initiatives
 - Local sourcing programmes
@@ -1969,6 +2010,12 @@
 - COVID-19 relief efforts (free meals for healthcare workers)
 - Local restaurant support programmes
 - Food bank partnerships (limited)
+- Digital inclusion programmes
+- Female entrepreneur upskilling
+- Women rider upskilling
+- Pro-bono financial workshops for riders
+- MOU with government agencies for rider support formalisation
+- Home chef / cottage food seller initiative
 
 ---
 
@@ -2042,6 +2089,15 @@
 - Labour rights concerns across markets
 - Whistleblower hoax controversy (fabricated claims by Reddit user, Jan 2026)
 
+### Market-Specific Controversies
+
+- Thailand boycott (advert on political programme controversy)
+- Malaysia hidden fees allegations
+- Philippines rider protests (mass suspension controversy)
+- Hong Kong rider strike (income promise disputes)
+- India malpractice allegations (non-payments, fake listings)
+- Taiwan competitor acquisition blocked by regulators
+
 ---
 
 ## 28. Metrics & KPIs
@@ -2055,10 +2111,12 @@
 - Monthly active platform users: 200M+ (Uber total)
 - Average daily trips: 42M+ (Uber total)
 - Total trips since inception: 72B+ (Uber total)
+- Market-specific breakdowns (downloads, active users, merchants, riders, market share, revenue)
 
 ### Financials (Uber Delivery Segment — Uber Eats)
 
 - Delivery gross bookings: ~$75B (2025)
+- Platform-wide GMV
 - Delivery revenue: $13.7B (2025, 19% YoY increase)
 - Delivery operating income: $2.4B (2025)
 - Adjusted EBITDA: $3.5B+ (Delivery segment, 2025)
@@ -2076,6 +2134,7 @@
 - Average monthly savings per member: $27
 - Member frequency: higher order frequency vs non-members
 - Cross-platform adoption (rides + delivery)
+- Subscription membership growth (YoY by market)
 
 ### Uber Eats Ads
 
@@ -2083,6 +2142,11 @@
 - Active advertisers: growing (launched Ads APIs Jun 2026)
 - Deal Drops partners: increasing
 - 75%+ delivery decisions within 1 hour (ad urgency insight)
+
+### Payment Metrics
+
+- Payment success rate
+- Mobile payment adoption rate (by market)
 
 ### App Metrics
 
