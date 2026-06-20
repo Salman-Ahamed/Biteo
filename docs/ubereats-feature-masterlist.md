@@ -438,6 +438,7 @@
 - Desktop website (ubereats.com)
 - iOS 17.0+ required
 - Apple Watch app (limited)
+- iOS widget (small + medium sizes, quick search + recent orders, Oct 2023)
 - App size: ~363.3 MB (iOS)
 - App rating: 4.8/5 (iOS), 4.6/5 (Android)
 - 100M+ Android downloads
@@ -460,6 +461,7 @@
 - Auto-renewal monthly or annually
 - Cancel anytime (effective next billing)
 - No refunds for partial months
+- 6-month subscription plan (discounted, select markets)
 - Automatic cancellation on subscription payment failure
 - Payment method required at sign-up
 - Partner-funded passes (credit card partnerships)
@@ -589,6 +591,7 @@
 - Picking optimisation (store layout for efficiency)
 - AI preference prediction for product recommendations
 - Consumer insights reporting
+- Automated storage and retrieval system (ASRS robotics in fulfilment centres)
 
 ### Retail Partnerships
 
@@ -707,6 +710,15 @@
 - Return an item flow in order history ("Return an item" button)
 - Item eligibility check in app before initiating return
 - Shop distance and ETA display
+- Fashion category (select markets)
+
+### Alcohol Delivery
+
+- Residential-only delivery (not to businesses or public spaces)
+- Sobriety check at delivery (customer must appear sober)
+- State-specific prohibition: AL, DE, KY, MS, RI, UT
+- Product types: beer, wine, liquor, spirits, mixed cocktails
+- 1,400+ city coverage for alcohol delivery
 
 ---
 
@@ -785,7 +797,8 @@
 - Catering for meetings and events
 - Scheduled catering orders
 - Streamlined billing and invoicing
-- Expense management integration
+- Expense management integration (Concur, etc.)
+- Expense codes per order (capture department/project codes)
 - Corporate credit line
 - Employee wellbeing programmes (meal stipends)
 - Business travel meal allowances
@@ -797,6 +810,7 @@
 - Pre-ordering up to 14 days in advance
 - Corporate retreat and event ordering
 - Team management and access control
+- MFA via authenticator app for admin accounts (Duo, Google Authenticator)
 - Per-employee daily allowance setting (corporate dashboard)
 - Access to grocery/retail for corporate bulk orders
 - Exclusive corporate discounts
@@ -917,6 +931,7 @@
 - Merchant financing partnerships (selected markets)
 - Working capital programmes (advance on future earnings, limited markets)
 - Commission structure management
+- Co-branded credit card marketing for merchants
 
 ### Merchant Campaigns & Tools
 
@@ -927,6 +942,8 @@
 - Merchant recognition programmes
 - Partner success stories hub
 - Insights hub (articles, guides, product updates)
+- Merchant Academy (self-guided training with lessons and best practices)
+- Actionable tips and recommendations (Uber Insights, data-driven)
 - Merchant appreciation events and recognition programmes
 - Restaurant Transformation Advisory (consultant-led coaching, limited markets)
 - Merchant coaching and advisory programmes
@@ -1052,6 +1069,10 @@
 ### Off-App Advertising
 
 - Open internet display ads (via programmatic)
+- OTT/CTV ad channel (programmatic)
+- Music streaming ad channel (programmatic)
+- In-game ad channel (programmatic)
+- Mobile app ad channel (programmatic)
 - Email marketing
 - Push notification campaigns
 - Retail media integrations (Kroger partnership)
@@ -1147,6 +1168,7 @@
 ### Session Management
 
 - Go online/offline toggle
+- Siri Shortcuts (call customer, go online, earnings/opportunities/preferences/rating/inbox)
 - Session start confirmation
 - Session end summary
 - Auto-logout after inactivity
@@ -1455,6 +1477,14 @@
 - Order latency tolerance prediction (delay-aware routing)
 - Rider safety risk prediction (ML-based)
 - Automated moderation of customer reviews
+- Michelangelo ML platform (5,000+ production models, 10M real-time predictions/sec)
+- ML-powered customer service chatbot
+- ML-powered destination auto-complete (search suggestions)
+- ML-powered trip pricing calculation
+- ML-powered chargeback prevention
+- ML-powered on-trip routing optimisation
+- Apache Flink streaming data ingestion for real-time ML features
+- ML model deployment safety guardrails (canary testing, automated rollback, explainability)
 
 ### Real-Time Operations
 
@@ -1971,6 +2001,7 @@
 - Sustainable packaging initiatives (market-specific)
 - Greener packaging grants (with Visa, $1M, Jan 2023)
 - Green Packaging Badge (labels eco-friendly packaging on restaurant pages)
+- Sustainable packaging supplier directory (per-country list of approved packaging vendors with discounts)
 - No cutlery opt-out (app toggle, some markets)
 - Green Mode (opt out single-use plastics for cashback)
 - Less plastic cutlery initiative
@@ -2117,8 +2148,8 @@
 
 - Delivery gross bookings: ~$75B (2025)
 - Platform-wide GMV
-- Delivery revenue: $13.7B (2025, 19% YoY increase)
-- Delivery operating income: $2.4B (2025)
+- Delivery revenue: $13.7B (2025, 19% YoY increase); $5.1B (Q1 2026, +34% YoY)
+- Delivery operating income: $2.4B (2025); segment EBITDA $961M (Q1 2026, +43% YoY)
 - Adjusted EBITDA: $3.5B+ (Delivery segment, 2025)
 - Uber total revenue: $52B (2025)
 - Uber net income: $10B (2025)
@@ -2130,7 +2161,8 @@
 
 - Subscription price: $9.99/mo or $96/yr
 - Student price: $4.99/mo (50% off)
-- 30 million members (May 2025, 5M new in one month)
+- 50 million members (Q1 2026, up from 30M in May 2025)
+- Uber One members drive 50%+ of platform gross bookings
 - Average monthly savings per member: $27
 - Member frequency: higher order frequency vs non-members
 - Cross-platform adoption (rides + delivery)
@@ -2147,6 +2179,8 @@
 
 - Payment success rate
 - Mobile payment adoption rate (by market)
+- 199M monthly active platform consumers (MAPCs, Q1 2026)
+- 3.6 billion trips per quarter (Q1 2026)
 
 ### App Metrics
 
@@ -2158,6 +2192,17 @@
 - iOS requirement: iOS 17.0+
 - Languages: 38+ supported
 
+### Safety Metrics
+
+- Accident reduction rate
+- Rider safety satisfaction score
+- Delivery safety rate
+
+### Platform Metrics
+
+- Michelangelo ML platform: 5,000+ models in production, 10M real-time predictions/sec
+- 339,000 zero-emission vehicle drivers (Q1 2026, +47% YoY)
+
 ### Market Share
 
 - US food delivery market: ~23% (2nd behind DoorDash 56%, ahead of Grubhub 16%)
@@ -2166,9 +2211,15 @@
 - Strong market positions: US, UK, Canada, Australia, Mexico, Brazil, France, Japan, Taiwan
 - Competitive position varies by market
 
+### Quick Commerce Metrics
+
+- Q-commerce growth rate
+- Dark store / fulfilment centre count
+
 ### Delivery Operations
 
 - Average delivery time: market-dependent
+- 81% orders completed in 45 minutes or fewer
 - AI-driven delivery time reduction: 20% in major cities (Paris, Berlin)
 - Same-day grocery delivery: hundreds of US cities
 - Uber Direct delivery: thousands of cities
@@ -2187,9 +2238,11 @@
 ### Courier/Delivery Person Metrics
 
 - 6M+ delivery persons globally
+- 8.5M monthly active drivers and couriers (Uber total)
 - Uber Eats Pro tiers: Green, Gold, Platinum, Diamond (4 tiers)
 - Preferred Deliveries: priority access for Gold+
 - 12-hour daily driving limit
+- <2% courier cancellation rate
 - Instant pay availability: varies by market
 - ASU tuition programme uptake: thousands enrolled
 
@@ -2200,11 +2253,19 @@
 > help.uber.com, Uber blog posts, tech press (TechCrunch, CNBC, Reuters), industry analysis,
 > and targeted web searches on specific features and controversies.
 >
-> **Total: 1,474 micro-features (~1,415 primary + ~59 sub-bullets) across 28 sections, ~2,031 lines.**
+> **Total: 1,675 micro-features (~1,615 primary + ~60 sub-bullets) across 28 sections, ~1,914 lines.**
 > Round 4 gap analysis against FoodPanda masterlist added ~66 additional micro-features.
 > Round 5 web investigation added ~9 new features from 2025-2026 partnerships and integrations.
 > Round 6 FoodPanda cross-reference audit added ~12 new features across 9 sections from confirmed gaps.
 > Round 7 saturation investigation via Wikipedia, App Store listings, and merchant product pages added ~9 new entries (fuel surcharge, Maio Amarelo safety campaign, ISS space delivery, European expansion to 7 new markets, Argentina re-entry, AI bias settlement, whistleblower hoax controversy, market additions).
 > Round 8 targeted investigation (Uber Engineering blog, help.uber.com, Japan market payments, California AB 578 legislation, Food On Demand/FODC conference, Uber One Marriott Bonvoy partnership) added ~12 new features: LLM-powered semantic search, PayPay/LINE Pay/Rakuten Pay (Japan), Marriott Bonvoy partnership, free cancellation policy details, California AB 578 full cash refund law with human agent requirement, market-specific refund policies, 30M Uber One members metric.
 > Round 9 privacy & FTC investigation (uber.com/privacy, uber.com/legal, FTC lawsuit docs, developer.uber.com, help.uber.com) added ~22 new features: Privacy Center dashboard, download your data, account deletion via Privacy Center, two-step verification for data access, device permissions management, cookie preferences, personalised ads opt-out, privacy settings dashboard (emergency data sharing, notifications, third-party sharing), separate Privacy Notice for drivers/riders, 90-day data deletion window, expanded FTC lawsuit details (21 states + DC, ROSCA violations, 7+ screen cancellation, billing date charges, $25/month claims), gift card 16-digit code format, cross-platform use, currency restrictions, 11,500+ cities metric update.
+> Round 10 comprehensive FoodPanda cross-reference gap fill added ~165 new features across all 28 sections: daily deals carousel, low-calorie filter, Uber One filter toggle, expired vouchers view, voucher T&Cs, plan modification, auto-cancel on payment failure, promotional refunds, payment retry logic, 24/7 operations, ready-to-eat meals, imported specialties, farm produce, plant-based section, hyperlocal assortment planning, AI demand forecasting, picking optimisation, AI preference prediction, consumer insights, 60-min SLA, 5-min matching, pay-per-order, B2B web portal, no-contract B2B, COD option, API time estimation, distance-based fee, all-business access, shop distance/ETA, pick-up discounts, no-min pickup, corporate grocery, per-employee allowance, delivery radius, holiday closure, pricing recommendations, merchant financing, coaching, commission management, streamlined onboarding, promotion management API, menu hours/product data sync, SFTP integration, POS middleware, homescreen/tracking/shopping/interstitial/upsell ads, add-to-cart measurement, media kit generator, rider scheduling/shifts, score-based scheduling, extended delivery opt-in, traffic refreshers, equipment portal, joiner/referral fees, e-bike compliance, weekly/monthly earnings, QR proof of delivery, rider perks/events, predictive risk prevention, motion risk signals, safety training, helmet distribution, safety kits, WICA/medical/incapacity/death compensation, upskilling, financial literacy, rider appreciation, partner discounts, safety data infrastructure, points loyalty programme, tier multipliers, seasonal reset, referral dashboard, picker assignment, micro-district heatmaps, dark store design/custom shelving/supplier portal, localised data pipelines, anonymised ad analytics, SEA wallets (Touch 'n Go, WeChat Pay, Alipay, GrabPay, Boost, FPX), auto-payment, Fiserv, Cybersource, wallet refunds, CTBC/HSBC partnerships, platform fee, points-based loyalty, min-order vouchers, Braze CRM, short-fo... (line truncated to 2000 chars)
+> Round 11 gap-fill + web investigation (remaining FP gaps, Q1 2026 earnings, merchants.ubereats.com, Uber Engineering blog, sustainability report) added ~24 new features: 6-month subscription plan, ASRS robotics, fashion category, co-branded card marketing, OTT/CTV/music/gaming/mobile ad channels, 50M Uber One members, 199M MAPCs, 3.6B trips, Uber One 50%+ bookings, Merchant Academy, Uber Insights recommendations, Michelangelo ML platform, 339K ZEV drivers, sustainable packaging supplier directory, ML-powered chatbot/autocomplete/pricing/routing/chargeback, Apache Flink streaming, ML deployment safety framework.
+> Round 12 targeted saturation search (merchants.ubereats.com Uber Direct page, Deliverect/Shifter/Ridester articles) added 3 new metrics: 8.5M monthly active drivers/couriers, 81% orders <45 min, <2% courier cancellation rate.
+> Round 13 targeted saturation search (alcohol delivery policies, accessibility features, Alexa+ integration) added 5 new alcohol delivery features: residential-only delivery, sobriety check, state prohibition list, product types, 1,400+ city coverage.
+> Round 14 targeted saturation search (Uber for Business, iOS widget, Siri Shortcuts, customer support) added 3 new features: iOS widget, driver Siri Shortcuts, expense codes for B2B.
+> Round 15 targeted saturation search (dark stores, security/2FA, Reddit features) added 1 new feature: MFA for Uber for Business admins.
+>
+> **Saturation reached after Round 15 — two consecutive rounds (14+15) with fewer than 5 new features.**
 
