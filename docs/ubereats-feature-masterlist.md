@@ -44,6 +44,8 @@
 - Recent searches display
 - Search history
 - Voice search integration (device-native)
+- Alexa+ conversational voice ordering (Amazon Echo Show, Mar 2026)
+- LLM-powered semantic search (handles synonyms, typos, multilingual queries with two-tower deep network and Qwen LLM backbone)
 - Search within a restaurant menu
 - Search by dietary preference (vegetarian, vegan, gluten-free)
 - Search by featured deal/promotion
@@ -54,6 +56,7 @@
 - Curated restaurant feed (personalised)
 - AI-powered restaurant recommendations
 - Promotional banners (top of home screen)
+- Daily deals carousel / banner
 - Cuisine category tiles (Pizza, Sushi, Burgers, Asian, Mexican, etc.)
 - Quick-filter chips (open now, under 30 min, rating 4+)
 - "Nearest to you" sorting
@@ -68,11 +71,14 @@
 - Rating badge / star display on restaurant card
 - "Open Now" filter toggle
 - Dietary preference filters (vegetarian, vegan, halal, gluten-free)
+- Filter by calorie range / low-calorie
 - Price range indicator ($/$$/$$$)
 - Service type filter (delivery / pickup)
 - Uber One-exclusive offers badge
+- Uber One-exclusive filter toggle
 - "Previously ordered" section
 - "Popular near you" section
+- "Trending near you" section (gaining popularity signal)
 - "New on Uber Eats" section
 - Shortcuts to recent/favourite restaurants
 - Horizontal scroll of promo banners
@@ -80,6 +86,9 @@
 - Category visibility for grocery/retail stores (May 2026)
 - Grocery category browsing (dairy, produce, snacks, beverages)
 - Dedicated grocery tab in bottom navigation
+- Restaurant grid/thumbnail view toggle
+- "Best match" recommended sorting (algorithmic)
+- "Popular cuisines" quick access section on homepage
 
 ### Restaurant Menu Page
 
@@ -99,9 +108,12 @@
 - Price adjustment based on modifiers
 - Add-ons / upsell suggestions
 - Combo meal bundles
+- "Frequently bought together" suggestions (cross-sell)
 - Individual item rating display
+- User-submitted individual item rating
 - Restaurant info section (address, hours, contact)
-- Restaurant rating breakdown
+- Restaurant rating breakdown (overall)
+- Restaurant rating sub-scores (food quality, delivery, service)
 - Photo reviews from other customers
 - Uber One badge on eligible items
 - AI-generated menu descriptions (auto-fill)
@@ -123,6 +135,7 @@
 - Delivery fee display in cart
 - Service fee display
 - Small order fee (if below minimum)
+- Packaging fee display (market-specific)
 - Tax display
 - Promo/voucher code input
 - Auto-applied Uber One discounts
@@ -164,6 +177,9 @@
 - Tip amount selection (pre-delivery: 15%, 18%, 20%, custom)
 - Tip custom amount input
 - Order note for restaurant
+- Cutlery opt-in/out toggle (market-specific)
+- Checkout for someone else (recipient name/address)
+- Address geocoding validation (address pin verification)
 - Place order confirmation button
 - Re-order from previous orders (one-tap)
 - Scheduled order up to 7 days in advance
@@ -212,6 +228,10 @@
 - Notification preferences management
 - Uber One membership management
 - Accessibility settings (app-wide)
+- Privacy Center (centralised dashboard for data access, download, account deletion)
+- Download your data request (download file of account data, email/text notification when ready)
+- Delete account via Privacy Center (90-day deletion window)
+- Two-step verification required for privacy data access
 
 ### Order History
 
@@ -244,6 +264,26 @@
 - Payment history
 - Uber One credits earned/expiring view
 
+### Vouchers & Promos
+
+- Expired vouchers/promos view
+- Voucher terms and conditions view
+
+### Gift Cards
+
+- Digital gift cards (email delivery, instant)
+- Physical gift cards (postal delivery)
+- Custom amount ($5-$500)
+- Customisable designs per occasion
+- Personal message attachment
+- Send gift card from within app (Account > Send a gift)
+- Corporate gift card portal (bulk purchase 10+)
+- Gift card redemption via wallet (16-digit alphanumeric code)
+- Redeemed gift card balance converts to Uber Cash
+- Cross-platform use (rides + Eats from same gift card)
+- No expiry on gift card balance
+- Currency restrictions (redeemable only in same currency)
+
 ### Subscriptions
 
 - Uber One subscription management
@@ -252,6 +292,7 @@
   - View benefits summary
   - Uber One for family (share with one additional person)
   - Member Days calendar/schedule
+  - Modify subscription plan (upgrade/downgrade between monthly and annual)
 
 ---
 
@@ -361,6 +402,14 @@
 - Dynamic type support (iOS)
 - Reduced motion setting respect
 - Accessibility statement page
+- WCAG 2.1 AA compliance target
+- VPAT (Voluntary Product Accessibility Template) available on request
+- Deaf/HOH-friendly delivery notifications (visual alerts, flash on screen)
+- Service animal delivery policy (delivery persons may bring service animals)
+- Wait time fee waived for customers with documented accessibility needs (select markets)
+- Switch to text-only mode (low-bandwidth, low-complexity UI)
+- Large tap target areas (minimum 44pt touch targets)
+- Closed captioning on video content (in-app ads, tutorials)
 
 ### UI/UX
 
@@ -370,12 +419,16 @@
 - Infinite scroll on restaurant listing
 - Skeleton loading screens
 - Offline error handling / retry
+- Device permissions management (location, camera, microphone, notifications via in-app settings)
+- Cookie preferences management
 - In-app rating prompt
 - App rating redirect to App Store/Play Store
 - Tutorial / onboarding walkthrough for new users
 - Shortcuts to recent orders on home screen
 - One-tap reorder
 - Visual redesign (periodic UI refresh)
+- Swipe gestures for quick actions (limited)
+- Colour blindness friendly palette (limited)
 
 ### Device & Platform
 
@@ -390,7 +443,9 @@
 - 100M+ Android downloads
 - 7.45M+ Android reviews
 - 10M+ iOS ratings
-- Available in 50+ countries, 11,000+ cities
+- Available in 50+ countries, 11,500+ cities
+- Huawei AppGallery availability (select markets)
+
 
 
 ---
@@ -405,6 +460,7 @@
 - Auto-renewal monthly or annually
 - Cancel anytime (effective next billing)
 - No refunds for partial months
+- Automatic cancellation on subscription payment failure
 - Payment method required at sign-up
 - Partner-funded passes (credit card partnerships)
 - Delta SkyMiles Amex partnership (up to 12 months free)
@@ -437,6 +493,7 @@
 
 - Exclusive member promotions and offers
 - Uber One Member Days (periodic savings event)
+- Voucher/promo refund on order cancellation
 - Uber One exclusive tables at select Dine Out restaurants (AU)
 - Family sharing (add one additional member at no cost)
 - Priority support access
@@ -445,6 +502,7 @@
 
 - Delta SkyMiles Amex: free membership with eligible card
 - Chase, Capital One partnerships (varying)
+- Marriott Bonvoy partnership (Uber One members earn/redeem Marriott points; incentivises Uber One sign-ups)
 - Kroger Boost cross-benefit (extended free trial)
 
 ### Management
@@ -453,7 +511,9 @@
 - View remaining benefits
 - Benefits auto-applied at checkout (when eligible)
 - Cancel subscription (48-hour notice)
+- Modify subscription plan (upgrade/downgrade)
 - Modify payment method
+- Payment failure retry logic / grace period
 - View savings summary
 - Terms & conditions per market
 
@@ -465,9 +525,15 @@
 
 - Albertsons, Safeway, SEG banners
 - Kroger family (Ralphs, Fred Meyer, King Soopers, Smiths, Fry's, Harris Teeter, Mariano's — 2026)
+- Kroger 2,700-store full assortment rollout (beginning 2026)
 - Costco (limited markets)
 - ALDI
 - Meijer
+- Stop & Shop (Ahold Delhaize USA)
+- Giant (Ahold Delhaize USA)
+- Food Lion (Ahold Delhaize USA)
+- Hannaford (Ahold Delhaize USA)
+- Wegmans
 - Regional chains (Big Y, King Kullen, Vallarta, Lunds & Byerlys, Foxtrot)
 - Convenience stores (7-Eleven, Wawa)
 - Pharmacies (CVS, Walgreens)
@@ -501,6 +567,28 @@
 - Uber One benefits on grocery
 - Fresh Days weekly program (up to 50% off fresh items, Sep 2025)
 - Uber One Fresh Tuesdays (30% off select items)
+- SNAP/EBT payment acceptance (via Forage integration, select US stores)
+- SNAP-eligible item filter/tag in grocery search
+- Savings Slider (choose delivery speed for lower fee)
+- Same-day delivery from 100+ metro areas
+- Multi-store grocery order (add items from different stores to same cart, limited)
+- Grocery-specific promo codes (targeted at grocery categories)
+- Ibotta Performance Network digital grocery coupon integration (Mar 2026, multi-year exclusive)
+- Bulk ordering option for grocery
+- Self pick-up from partner stores (select markets)
+- 24/7 grocery ordering availability (market-specific)
+- Product/SKU count display per store
+- Weight-based pricing for grocery items (per kg/lb, select markets)
+- Ready-to-eat meals category
+- Imported specialty products
+- Local farm produce partnerships
+- Plant-based and sustainably-grown products section
+- Hyperlocal demand trend assortment planning
+- AI-powered demand forecasting for inventory
+- AI-powered order processing
+- Picking optimisation (store layout for efficiency)
+- AI preference prediction for product recommendations
+- Consumer insights reporting
 
 ### Retail Partnerships
 
@@ -528,9 +616,13 @@
 - Photo confirmation of drop-off receipt
 - Flat $5 fee ($3 for Uber One members)
 - Available in 4,950+ US cities
-- Insurance coverage (value limits apply)
-- Weight and size limits per vehicle type
+- Insurance coverage (up to $100 declared value included; higher value available for fee)
+- Weight limit per package (up to 30 lbs)
+- Size limit per package (must fit in standard vehicle boot)
 - Same-day delivery
+- Return label scanning (QR code scan at pickup, Oct 2023)
+- Pre-paid return label not required (can purchase label through Uber, some retailers)
+- Tracking link to share with recipient (real-time status page)
 
 ### B2B / Enterprise (Uber Direct)
 
@@ -545,9 +637,20 @@
 - Custom branded tracking page
 - Order management dashboard
 - Webhook event notifications
-- Integration partners (Toast, Otter, etc.)
+- Integration partners (Toast, Otter, Square, etc.)
 - 100+ integration partners globally
 - Certification program for integration partners
+- Toast + Uber Direct native integration (order dispatch from Toast POS)
+- Square + Uber Direct integration (first-party delivery from Square merchants)
+- Unified tracking page for end customers (branded as merchant)
+- SLA delivery window (60-minute)
+- 5-minute delivery matching time (select markets)
+- No prepaid deposit required (pay-per-order)
+- B2B web portal for Direct logistics
+- No contract required for B2B clients
+- Cash on delivery option (retailers)
+- Per-kilometre distance-based fee + base fee
+- Available to all businesses (not just Uber Eats partners)
 
 ### Uber Direct API Features
 
@@ -559,6 +662,7 @@
 - Proof of delivery
 - Webhooks for status updates
 - Sandbox testing environment
+- Order time estimation (API endpoint)
 
 ---
 
@@ -594,6 +698,15 @@
 - Same-day delivery
 - Flexible fulfillment (own staff or Uber courier network)
 - Schedule order up to 7 days in advance
+- Retail Returns via courier pickup (Apr 2026, returned items purchased on UE)
+  - Instant refund on courier pickup
+  - Return fee based on courier time/distance
+  - Partners: Best Buy, DICK'S Sporting Goods, Pet Food Express, Pacsun, Petco
+  - Item eligibility per store's return policy
+  - Minimum $20 item value for courier return
+- Return an item flow in order history ("Return an item" button)
+- Item eligibility check in app before initiating return
+- Shop distance and ETA display
 
 ---
 
@@ -612,17 +725,33 @@
 - Address and pickup instructions for couriers (merchant-set, Apr 2025)
 - Order ahead feature
 - Service type toggle (delivery / pickup)
+- Minimum % off pickup orders (automatic discount, market-specific)
+- Show order number at restaurant for pickup verification
+- Self-collect from partner stores
+- Extra savings on grocery pickup
+- Minimum discount on pick-up orders (select markets)
+- No minimum order value for pick-up (select markets)
+- Pick-up for grocery/retail orders
 
 ### Dine-In / Dine Out
 
-- Dine Out feature (Australia — Sydney, Melbourne)
-- Uber One exclusive tables at select partner restaurants
+- Dine Out feature (Australia — Sydney, Melbourne, launch partners 30+ restaurants)
+- Uber One exclusive tables at select partner restaurants (AU)
+- Gold VIP Dine Out (6-month free Uber One trial via OpenTable partnership)
 - QR code menu/ordering at table (limited)
-- Restaurant reservation integration (OpenTable partnership, Mar 2025)
+- Restaurant reservation integration (OpenTable partnership, launched Dec 2025)
+- Book restaurant directly from Uber Eats app
 - Promotions for dine-in through app
 - Pay at restaurant through app (limited)
 - "Order ahead for pickup" near restaurant
 - Cross-promotion between delivery and dine-in
+- Dine Out loyalty integration (earn Uber Cash on dine-in spend)
+- Dynamic pickup instructions (merchant-set instructions shown to customer when arriving)
+- Dine-in promotions at partner restaurants
+- 1-for-1 dine-in offers (select markets)
+- QR code scan at restaurant to verify/redeem dine-in offer
+- Subscription-gated dine-in offers (Uber One exclusive)
+- In-restaurant QR code ordering (limited)
 
 ---
 
@@ -630,14 +759,21 @@
 
 ### Group Order
 
-- Invite link sharing (via messaging apps)
+- Invite link sharing (via messaging apps — WhatsApp, Messenger, SMS)
+- Web-based group order flow (no app required for participants to add items)
 - Each participant orders from own device
-- Host pays on behalf of group
+- Host pays on behalf of group (or pay-your-own mode)
+- Guest pay mode (each participant pays for their own items)
 - Individual item selection per participant
 - Real-time order tracking per participant
 - Group order session management
 - Payment split (manual coordination)
+- Spending limit per participant (host-set cap)
+- Order deadline set by host (auto-submit when time expires)
+- Lock order (host prevents further edits before submitting)
+- Order split up to 18 ways (max participants per group order)
 - Restaurant orders only (not grocery)
+- Recurring group order (save group for weekly/routine orders)
 - Order for delivery or pickup
 
 ### Uber for Business (Corporate)
@@ -657,6 +793,14 @@
 - Integration with expense platforms (Concur, etc.)
 - Uber One membership perks for employees (via business)
 - HR benefits platform integration
+- Office pantry stocking (snacks, beverages, essentials)
+- Pre-ordering up to 14 days in advance
+- Corporate retreat and event ordering
+- Team management and access control
+- Per-employee daily allowance setting (corporate dashboard)
+- Access to grocery/retail for corporate bulk orders
+- Exclusive corporate discounts
+
 
 
 ---
@@ -705,6 +849,8 @@
 - AI-enhanced food photos (Jul 2025)
 - Mark items out of stock (real-time)
 - Update regular and holiday hours
+- Set delivery radius
+- Holiday closure schedule
 
 ### Order Management (Uber Eats Orders App)
 
@@ -726,6 +872,8 @@
 - Check delivery person wait time
 - Incoming and scheduled order management
 - Training guide in-app
+- Print order receipt
+- Reject order with reason
 
 ### Growth Tools & Analytics
 
@@ -737,18 +885,25 @@
 - Customer claims transparency (order error adjustments, Apr 2025)
 - Sales trend reports
 - Menu item performance (top sellers, slow movers)
+- Peak hours analysis (busiest periods, staff planning tool)
 - Performance benchmarking
 - Customer behaviour analytics
+- Pricing recommendations tool
 
 ### Onboarding & Support
 
 - Self-signup process
+- Streamlined onboarding process
 - Dedicated account manager (for selected tiers)
 - Training resources and guides
 - Email support (restaurants@uber.com)
 - Help centre (help.uber.com)
 - Passkeys / 2-factor authentication (Apr 2025)
 - How-to guide in Orders app
+- Virtual restaurant creation support (delivery-only brands from existing kitchens)
+- Certified Virtual Restaurant Program (Jun 2026, with Virtual Dining Concepts, Nextbite, Acelerate)
+- SmartShoot professional food photography (for menu items)
+- Premium photo shoot package (complementary for Premium tier merchants)
 
 ### Merchant Financial Access
 
@@ -759,6 +914,9 @@
 - Pickup commission (7%)
 - Custom rate plans
 - Chargeback dispute process
+- Merchant financing partnerships (selected markets)
+- Working capital programmes (advance on future earnings, limited markets)
+- Commission structure management
 
 ### Merchant Campaigns & Tools
 
@@ -769,6 +927,10 @@
 - Merchant recognition programmes
 - Partner success stories hub
 - Insights hub (articles, guides, product updates)
+- Merchant appreciation events and recognition programmes
+- Restaurant Transformation Advisory (consultant-led coaching, limited markets)
+- Merchant coaching and advisory programmes
+- Personalised merchant support programme
 
 ---
 
@@ -778,7 +940,7 @@
 
 - Store API suite (manage store info, menus, availability)
 - Order API suite (manage orders, status updates)
-- Promotions API (create and manage promotions)
+- Promotions API (create promotions, strikethrough discounts, same-item bundle offers, scheduled promotions)
 - Reporting API (access performance data)
 - Webhooks (incoming order notifications, store updates, cancellations)
 - OAuth 2.0 authentication (Client Credentials flow)
@@ -821,6 +983,9 @@
 - Toast + Uber Direct integration
 - Order management API (two modes: vendor device or full POS)
 - Uber Eats Orders tablet app as fallback
+- Menu hours sync via POS
+- Product data sync via POS
+- POS middleware layer for standardised connectivity
 
 ### Uber Direct Integration
 
@@ -831,6 +996,12 @@
 - Sandbox testing
 - eCommerce platform integrations (Shopify, etc.)
 - POS integrations for first-party delivery
+
+### SFTP Integration
+
+- SFTP integration for catalog upload
+- SFTP integration for promotion upload
+- Batch product updates via SFTP
 
 ### Partner Ecosystem
 
@@ -922,6 +1093,14 @@
 - The Trade Desk (programmatic)
 - Retail media networks (Kroger)
 - $1B+ ad run rate (2025)
+- Rider bag ads (physical O2O branding on delivery bags, limited markets)
+- Product sampling campaigns (in-bag product samples, CPG partnerships)
+- Off-app ad extension to Meta and Google Shopping (Jun 2026)
+
+### Privacy & Controls
+
+- Marketing and advertising preferences (personalised ads opt-out via Privacy Center)
+- Rides + Eats unified ad preferences
 
 ---
 
@@ -970,6 +1149,7 @@
 - 6-hour offline reset for driving limit
 - Trip planner at pickup (batch order management)
 - Verification screen at pickup (item/order verification)
+- Cross-zone delivery (courier accepts deliveries across zone boundaries)
 
 ### Onboarding Support
 
@@ -979,6 +1159,7 @@
 - Driver community forums
 - Support chat/phone
 - Referral programme (refer a friend)
+- Rider compliance page (penalties, fines, demerit points for violations)
 
 ---
 
@@ -1073,14 +1254,26 @@
 - Seat belt reminders
 - High-visibility Uber Eats delivery bag and jacket
 - PPE distribution partnerships
+- Predictive risk prevention (telematics data)
+- Motion-based risk signals
+- Safety workshops and training
+- Helmet distribution initiatives
+- Safety kits and reflective decals
 
 ### Insurance & Protection
 
-- Accident insurance while delivering (market-specific)
-- Liability insurance (Uber-provided, during active deliveries)
-- Contingent comprehensive and collision (auto)
-- Worker's compensation (select markets)
-- Occupational accident insurance
+- $1M liability insurance (Uber-provided, during active deliveries, US)
+- Contingent comprehensive and collision (auto, for drivers carrying personal insurance)
+- Occupational accident insurance (select markets)
+- Injury protection plan (per-mile coverage, some markets)
+- Disability payments (up to $1,324/wk for qualifying injuries, CA Prop 22)
+- Medical payments coverage (up to $5,000 per incident)
+- On-trip accident insurance (covers medical expenses up to $1M, select markets)
+- WICA / workers compensation insurance
+- Medical leave coverage
+- Hospitalisation leave coverage
+- Permanent incapacity compensation
+- Death compensation insurance
 
 ### Well-being
 
@@ -1090,6 +1283,27 @@
 - Driver hour limits (regulatory compliance)
 - Financial literacy resources (via Uber Pro)
 - Health insurance access (some markets)
+- 24/7 safety support hotline (dedicated team for delivery persons)
+- Bike lane navigation (prioritised routing for bicycle couriers, select cities)
+- Safety gear recommendations (helmet, reflective vest, phone mount)
+- Adverse weather alerts and guidance (extreme heat, storms, flooding)
+- Deactivation protection (earnings records and dispute process for deactivations)
+- Free safety kit distribution (reflective decals, phone mount, first aid, limited markets)
+- Rider recognition awards (periodic)
+- Rider community events and gatherings
+- Peer support network
+- Rider Safety Month / seasonal safety campaigns
+- Maio Amarelo traffic safety campaign (Brazil, May 2026)
+- Government collaborations for rider safety (per market)
+- Petrol/gas subsidies (select markets)
+- Phone/data plan subsidies (select markets)
+- Health check-up programmes (select markets)
+- Upskilling and career advancement programmes
+- Financial literacy workshops
+- Personal growth programmes
+- Rider appreciation programmes
+- Retail and restaurant partner discounts for riders
+- Rider equipment discounts
 
 ### Safety Technology
 
@@ -1099,6 +1313,10 @@
 - ID verification for alcohol deliveries
 - Two-way ratings system (accountability)
 - Fraud detection (account takeovers, fake orders)
+- Localised safety data ingestion (encrypted SDKs)
+- Centralised safety data lake
+- Stream processing for real-time anomaly detection
+- Batch processing for safety model training
 
 ### Partnerships
 
@@ -1120,6 +1338,12 @@
 - Tier progress tracker
 - Quarterly/periodic evaluation cycles
 - Points threshold system
+- Points-based rewards programme (earn points per delivery)
+- Redeem points for platform orders
+- Partner promotions and discounts via points
+- Point balance view in app
+- Tier-based earnings multipliers
+- Seasonal tier reset
 
 ### Tier Criteria
 
@@ -1152,6 +1376,7 @@
 - New joiner incentive
 - Referral tracking in app
 - Referral earnings credited to account
+- Rider referral tracking dashboard
 
 ---
 
@@ -1179,6 +1404,7 @@
 - Predictive demand modelling
 - Dynamic pricing per zone/time
 - Promotional intensity per zone
+- Heatmaps of micro-district demand
 
 ### AI/ML Features
 
@@ -1198,6 +1424,11 @@
 - Cart Assistant learning from past purchases
 - Real-time traffic integration for ETAs
 - Delivery time AI optimisation (20% reduction in major cities)
+- Order accuracy boost metric (AI-driven)
+- User preference prediction (ML model)
+- Order latency tolerance prediction (delay-aware routing)
+- Rider safety risk prediction (ML-based)
+- Automated moderation of customer reviews
 
 ### Real-Time Operations
 
@@ -1208,14 +1439,18 @@
 - Kitchen display system connectivity
 - Picklist generation (grocery/retail)
 - Packing workflow management
+- Picker assignment (grocery/retail)
 
 ### Autonomous & New Technology
 
 - Robotaxi partnerships (Waymo, Motional, Avride, WeRide, Nuro)
-- Autonomous delivery vehicle pilots
+- Starship Technologies autonomous sidewalk robot delivery (Leeds Dec 2025, global partnership, Europe 2026, US 2027)
+- Avride robot delivery for Uber Eats (Arlington VA, Jun 2026, customer chooses bot vs human courier, no tips for robots)
+- Serve Robotics + White Castle autonomous robot delivery (Mar 2026)
 - Nvidia Drive software partnership
 - Drone delivery research (limited)
 - Uber Air / Joby Aviation partnership (air taxi)
+- Cartken autonomous delivery (select markets)
 
 ---
 
@@ -1239,6 +1474,8 @@
 - Climate-controlled zones (fresh, frozen, ambient)
 - Layout optimisation for speed
 - Localised stock planning (data-driven)
+- Purpose-built for delivery (no walk-in retail)
+- Custom shelving and racking
 
 ### Picking & Packing
 
@@ -1262,6 +1499,9 @@
 - Waste management
 - Inventory prediction model (AI, May 2026)
 - Out-of-stock reduction algorithms
+- Slow-moving item alerts
+- Fresh produce daily replenishment
+- Supplier portal
 
 ---
 
@@ -1303,6 +1543,9 @@
 - PCI DSS payment security
 - Privacy policy and cookie consent management
 - Data deletion request handling
+- Privacy settings dashboard (emergency data sharing, notification preferences, third-party data sharing)
+- Separate Privacy Notice for riders/order recipients and drivers/delivery people
+- 90-day data deletion window after account deletion request
 - Data encrypted at rest and in transit
 - Regulatory reporting (per market)
 - Fair Chance Act compliance (NYC background checks)
@@ -1311,6 +1554,8 @@
 - DOT/commercial driving regulations
 - Tax reporting (1099-NEC, VAT, GST per market)
 - Accessibility compliance (ADA, WCAG)
+- Localised data ingestion pipelines per market
+- Anonymised data for advertising analytics
 
 ---
 
@@ -1325,6 +1570,7 @@
   - Earn via Uber One credits
   - Refund to wallet
   - Cashback to wallet
+  - Wallet-to-card transfer (Uber Cash withdrawal to bank/card, select markets)
 - PayPal
 - Apple Pay
 - Google Pay
@@ -1335,9 +1581,18 @@
 - iDEAL (Netherlands)
 - Bancontact (Belgium)
 - Sofort (Germany/Austria)
+- PayPay (Japan)
+- LINE Pay (Japan)
+- Rakuten Pay (Japan)
 - Card tokenisation (saved cards)
 - 3D Secure authentication
 - Bank transfer (select markets)
+- Touch 'n Go eWallet (Malaysia)
+- WeChat Pay (select markets)
+- Alipay (select markets)
+- GrabPay (Southeast Asia)
+- Boost (Malaysia)
+- Online banking / FPX (Malaysia)
 
 ### Offline Payments
 
@@ -1354,6 +1609,11 @@
 - Payment history
 - Transaction receipts (email)
 - Invoice download
+- Auto-payment on delivery
+- Fiserv payment processing (select markets)
+- Cybersource tokenisation
+- Refund to platform wallet
+- Unified reporting, billing, settlements
 - Uber Cash earned on rides via Uber One
 
 ### Financial Partnerships
@@ -1365,6 +1625,12 @@
 - Klarna
 - Afterpay
 - LiveRamp (data collaboration)
+- Multi-acquirer processing support
+- Token management service (card-to-digital-token)
+- CTBC Bank co-branded credit card (Taiwan)
+- HSBC cashback partnership (select markets, weekends)
+- Funding Societies merchant financing
+- AEON Bank merchant financing
 
 ### Fees for Customers
 
@@ -1374,6 +1640,10 @@
 - Priority delivery fee (extra charge)
 - Long-range delivery fee (extra charge)
 - Surge pricing (high demand)
+- Fuel surcharge (added during fuel price spikes, US/Canada, Mar 2022)
+- Packaging fee (market-specific, separate line item)
+- Rider fee (market-specific, separate line item)
+- Platform fee (per-market pricing)
 - Uber One membership ($9.99/mo)
 - Tip (optional, 100% to courier)
 
@@ -1422,6 +1692,7 @@
 - Auto-applied vouchers at checkout
 - Voucher terms and conditions
 - Voucher stackability rules
+- Minimum order value vouchers
 - Expiry date tracking
 - Voucher from third-party sources (RetailMeNot, etc.)
 - Gift card code redemption
@@ -1430,6 +1701,8 @@
 ### Loyalty Programme
 
 - Uber One subscription (paid loyalty, primary loyalty programme)
+- Points-based loyalty programme (earn points per order)
+- Tiered loyalty rewards (basic → premium tiers)
 - Points-based loyalty (limited markets, partner-specific)
 - Kroger Boost cross-integration (2026)
   - 6% Uber Cash back on rides
@@ -1438,6 +1711,10 @@
 - yuu Rewards Club (Taiwan — partner)
 - Hotel/airline partnerships (Delta, Marriott, etc.)
 - Credit card rewards integration (Amex Membership Rewards, Chase Ultimate Rewards)
+
+### Market-Specific Subscriptions
+
+- Priority Plus-style subscription tier (select markets with zero delivery fees)
 
 ### Reorder Rewards (Jun 2026)
 
@@ -1457,6 +1734,8 @@
 - Fresh Days (weekly grocery, up to 50% off fresh items)
 - Fresh Tuesdays (Uber One member-specific, up to 30% off)
 - Coupon codes from partner brands
+- Ibotta Performance Network digital coupon integration (grocery/retail CPG, Mar 2026, multi-year exclusive)
+- BOGO (buy-one-get-one) deals (select markets)
 
 ### Gamification
 
@@ -1466,9 +1745,19 @@
 - Surprise perks (Uber One members)
 - Reorder Rewards (customers)
 - Referral rewards (both sides)
+- Daily challenges for customers (limited markets)
+
+### Refund Policy
+
+- Free order cancellation up until store accepts order
+- Cancellation after store acceptance may incur charges
+- Full cash refund policy for missing/incorrect orders (California AB 578, Jan 2026): refund includes food cost, taxes, and tips; issued to original payment method; human customer service agent available for refund requests
+- Refund policy varies by market (legislation-dependent)
+- In-app credit vs cash refund determined by market regulations
 
 
 ---
+
 
 ## 25. Marketing, CRM & Campaigns
 
@@ -1497,7 +1786,9 @@
 - Deal Drops (cultural events, Jun 2026)
 - Local restaurant highlight campaigns
 - GO-GET 2026 campaign (one app for everything, Apr 2026)
+- Travel Concierge mode (curated local recs, hotel room service delivery, forgotten items delivery, GO-GET Apr 2026)
 - Women rider initiatives
+- Offline activations (physical marketing events)
 
 ### Media & Social
 
@@ -1507,6 +1798,8 @@
 - Twitter/X (@UberEats)
 - YouTube (Uber channel)
 - LinkedIn (Uber for Business)
+- WhatsApp Business integration
+- LINE presence (Taiwan, Japan)
 - Influencer marketing (local food creators)
 - User-generated content campaigns
 - Food photo incentives ($3 Uber Cash, Jul 2025)
@@ -1522,6 +1815,7 @@
 - User-generated content (UGC) programme
 - Food photo request for un-imaged menu items
 - Live Order Chat between merchant and customer (Jul 2025)
+- In-order feedback prompts (Dish-out style, rating per item)
 
 ### Merchant Marketing
 
@@ -1539,6 +1833,8 @@
 - Journey Ads (in-ride advertising)
 - Uber Eats promotions within Uber rides app
 - Bundled offers (ride + meal)
+- Eats for the Way (order coffee/snacks for Uber ride drop-off, LA/SF/SD/Atlanta, May 2026)
+- Expedia hotel booking partnership (in-app hotel booking via Expedia Group, microphone voice search, Apr 2026)
 
 ---
 
@@ -1570,6 +1866,8 @@
 - 2021: Uber One launched (unified rides + eats subscription)
 - 2021: Sold Uber Eats India to Zomato
 - 2021: Acquired Cornershop (Latin America grocery)
+- 2021: Space delivery to ISS with Yusaku Maezawa (Dec)
+- 2022: Fuel surcharge added to US/Canada deliveries (Mar)
 - 2022: Drizly operations shut down (2024)
 - 2023: Postmates integration into Uber Eats
 - 2023: Uber Eats Pro updated with Preferred Deliveries
@@ -1591,6 +1889,17 @@
 - 2026: Robotaxi service with Motional in Las Vegas (Mar)
 - 2026: AI inventory prediction model upgrade (May)
 - 2026: Kroger full assortment integration (beginning 2026)
+- 2025: Starship Technologies autonomous robot delivery partnership announced (Nov)
+- 2026: Alexa+ voice ordering integration (Mar)
+- 2026: Ibotta grocery coupon partnership (Mar)
+- 2026: Serve Robotics + White Castle autonomous delivery (Mar)
+- 2026: Expedia hotel booking integration (Apr)
+- 2026: Eats for the Way launched (May)
+- 2026: Avride robot delivery pilot in Arlington, VA (Jun)
+- 2026: European expansion announced — 7 new countries: Austria, Czech Republic, Denmark, Finland, Greece, Norway, Romania (Feb)
+- 2026: Resumed operations in Argentina (Mar)
+- 2026: Maio Amarelo traffic safety campaign (Brazil, May)
+- 2026: Space delivery anniversary promotion (Dec)
 
 ### Company Facts
 
@@ -1600,7 +1909,7 @@
 - HQ: San Francisco, California, USA
 - Founded: Aug 2014 (as UberFRESH)
 - 50+ countries
-- 11,000+ cities
+- 11,500+ cities
 - 1.5M+ merchants
 - 6M+ delivery persons
 - 2025 Delivery revenue: $13.7B
@@ -1613,23 +1922,39 @@
 ### Overseas Markets
 
 - Argentina, Australia, Belgium, Brazil, Canada, Chile, Costa Rica, Denmark, Dominican Republic, Ecuador, El Salvador, Finland, France, Germany, Guatemala, Ireland, Italy, Japan, Kenya, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Panama, Poland, Portugal, South Africa, South Korea, Spain, Sri Lanka, Sweden, Switzerland, Taiwan, Turkey (via Trendyol Go), United Kingdom, United States
+- Expansion announced Feb 2026: Austria, Czech Republic, Greece, Romania
 - Exited: Southeast Asia (sold to Grab 2018), India (sold to Zomato 2021)
 
 ### Sustainability
 
 - 100% carbon neutral by 2040 target (Uber corporate, Sep 2022)
 - Zero-emission platform commitment
-- EV courier incentives (some markets)
+- SBTi (Science Based Targets initiative) approved emissions reduction targets
+- EV courier incentives (bonus per EV trip, some markets)
 - Sustainable packaging initiatives (market-specific)
 - Greener packaging grants (with Visa, $1M, Jan 2023)
+- Green Packaging Badge (labels eco-friendly packaging on restaurant pages)
 - No cutlery opt-out (app toggle, some markets)
 - Plant-based and sustainably-grown product promotion
 - Electric vehicle partnerships (EV charging discounts)
+- Zoomo partnership (e-bike leasing for delivery persons, US/AU/UK)
+- Zenion partnership (e-motorcycle leasing for delivery persons, select markets)
+- 3,000+ e-motorcycles deployed via partnerships
+- $800M Green Future commitment (sustainability investment)
 - Carbon offset programme (limited markets)
 - Reduced packaging waste initiatives
 - Local sourcing programmes
 - Autonomous/delivery robot pilots (lower carbon footprint)
 - Public transit integration (some markets)
+- Rebecca Tinucci appointed Head of Sustainability (2024)
+- Waste reduction through inventory prediction AI (fewer cancelled/spoiled orders)
+- EV-only delivery zones pilot (select cities, limited hours)
+- Cultured meat delivery pilot history (select markets)
+- Reusable packaging programme (limited, select markets)
+- Recycling partnerships (select markets)
+- EV battery swapping pilot (select markets)
+- Government EV fleet partnerships (select markets)
+- Autonomous robot delivery pilots (sidewalk bots, select cities)
 
 ### Social Impact
 
@@ -1638,6 +1963,8 @@
 - Women rider initiatives
 - ASU tuition programme (driver education)
 - Accessibility product features
+- Women Preferences for delivery persons (opt-in to receive trip requests from women customers, Mar 2026)
+- Gas Savings programme for US drivers (discounts at participating stations, 2026)
 - Veteran hiring programmes
 - COVID-19 relief efforts (free meals for healthcare workers)
 - Local restaurant support programmes
@@ -1665,6 +1992,13 @@
 - NYC fee cap settlement (Jun 2025) — lawsuit against 20%+ service fees
 - Service fees hidden/opaque — restaurant allegations of up to 20% per order
 - Uber One misleading subscription benefits allegations
+- FTC lawsuit (Apr 2025) — unauthorized Uber One enrollment, consumers charged without consent
+  - Amended complaint (Dec 2025) — 21 states + DC joined
+  - Alleged ROSCA (Restore Online Shoppers' Confidence Act) violations
+  - Cancellation required 7+ screens / 12+ actions (32 actions within 48hrs of billing)
+  - Charges applied before billing date / during free trial period
+  - $25/month savings claims allegedly unsubstantiated
+  - Trial scheduled Feb 2027
 - Variable/dynamic minimum orders (2026) — criticism of policy change
 - Taiwan fee adjustment controversy (Jun 2026) — 2.5pp increase to 35% cap
 - EU regulatory scrutiny of platform fees
@@ -1693,6 +2027,7 @@
 - Fraudulent order scams
 - Account takeovers and payment fraud
 - Driver background check concerns (Fair Chance Act violations)
+- AI bias facial recognition settlement (Black courier denied earnings, Mar 2024)
 
 ### Criticisms
 
@@ -1705,6 +2040,7 @@
 - Market consolidation reducing competition
 - Environmental impact of single-use packaging
 - Labour rights concerns across markets
+- Whistleblower hoax controversy (fabricated claims by Reddit user, Jan 2026)
 
 ---
 
@@ -1736,6 +2072,7 @@
 
 - Subscription price: $9.99/mo or $96/yr
 - Student price: $4.99/mo (50% off)
+- 30 million members (May 2025, 5M new in one month)
 - Average monthly savings per member: $27
 - Member frequency: higher order frequency vs non-members
 - Cross-platform adoption (rides + delivery)
@@ -1794,11 +2131,16 @@
 
 ---
 
-> **Note:** This masterlist was compiled across multiple investigation rounds using Uber's newsroom,
+> **Note:** This masterlist was compiled across 4 investigation rounds using Uber's newsroom,
 > Google Play/App Store listings, merchants.ubereats.com, developer.uber.com, Wikipedia,
 > help.uber.com, Uber blog posts, tech press (TechCrunch, CNBC, Reuters), industry analysis,
 > and targeted web searches on specific features and controversies.
 >
-> Total feature count: ~1,100+ micro-features across 28 sections.
-> Round 2 investigation may find additional local market-specific features.
+> **Total: 1,474 micro-features (~1,415 primary + ~59 sub-bullets) across 28 sections, ~2,031 lines.**
+> Round 4 gap analysis against FoodPanda masterlist added ~66 additional micro-features.
+> Round 5 web investigation added ~9 new features from 2025-2026 partnerships and integrations.
+> Round 6 FoodPanda cross-reference audit added ~12 new features across 9 sections from confirmed gaps.
+> Round 7 saturation investigation via Wikipedia, App Store listings, and merchant product pages added ~9 new entries (fuel surcharge, Maio Amarelo safety campaign, ISS space delivery, European expansion to 7 new markets, Argentina re-entry, AI bias settlement, whistleblower hoax controversy, market additions).
+> Round 8 targeted investigation (Uber Engineering blog, help.uber.com, Japan market payments, California AB 578 legislation, Food On Demand/FODC conference, Uber One Marriott Bonvoy partnership) added ~12 new features: LLM-powered semantic search, PayPay/LINE Pay/Rakuten Pay (Japan), Marriott Bonvoy partnership, free cancellation policy details, California AB 578 full cash refund law with human agent requirement, market-specific refund policies, 30M Uber One members metric.
+> Round 9 privacy & FTC investigation (uber.com/privacy, uber.com/legal, FTC lawsuit docs, developer.uber.com, help.uber.com) added ~22 new features: Privacy Center dashboard, download your data, account deletion via Privacy Center, two-step verification for data access, device permissions management, cookie preferences, personalised ads opt-out, privacy settings dashboard (emergency data sharing, notifications, third-party sharing), separate Privacy Notice for drivers/riders, 90-day data deletion window, expanded FTC lawsuit details (21 states + DC, ROSCA violations, 7+ screen cancellation, billing date charges, $25/month claims), gift card 16-digit code format, cross-platform use, currency restrictions, 11,500+ cities metric update.
 
