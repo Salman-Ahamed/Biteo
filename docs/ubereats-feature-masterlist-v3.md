@@ -2,14 +2,14 @@
 
 **Date:** July 2026 (QA audit corrected)
 **Rate:** £75/hr (blended senior/mid UK rate)
-**Total Est. Hours:** 2,608h
-**Total Est. Cost:** £195,600
+**Total Est. Hours:** 2,812h
+**Total Est. Cost:** £210,900
 
 ---
 
 ## QA Audit Report — v3 Corrections
 
-### Missing Features Restored (10 additions, +76h)
+### Missing Features Restored (12 additions, +86h)
 
 | v2 Ref | Feature | v3 Task Added | Hours |
 |--------|---------|--------------|-------|
@@ -18,13 +18,15 @@
 | v2:8 | Dark kitchen / virtual restaurant onboarding & management | M5 Merchant Dashboard — new task #31 | 10h |
 | v2:663-665 | Customer claims transparency dashboard & reviews-based recommendations | M5 Merchant Dashboard — new task #32 | 8h |
 | v2:669 | Merchant performance benchmarking vs peers | M5 Merchant Dashboard — new task #33 | 6h |
-| v2:793,807 | Training completion tracking (rider) | M6 Rider App — new task #56 | 4h |
-| v2:808 | Rider insurance enrolment flow | M6 Rider App — new task #57 | 4h |
-| v2:809 | Tax information submission (rider) | M6 Rider App — new task #58 | 4h |
+| v2:793,807 | Training completion tracking (rider) | M6 Rider App — new task #53 | 4h |
+| v2:808 | Rider insurance enrolment flow | M6 Rider App — new task #54 | 4h |
+| v2:809 | Tax information submission (rider) | M6 Rider App — new task #55 | 4h |
 | v2:1054 | Auto-payment on delivery confirmation | M3 Payment — new task #23 | 4h |
 | v2:1055-1056 | Fiserv + Cybersource processor integrations | M3 Payment — new task #24 | 8h |
+| v2:613 | Merchant notification preferences (store status, connectivity, POS issues, cancellations, missed/inaccurate orders) | M5 Merchant Dashboard — new task #34 | 6h |
+| v2:1047 | Single-click reorder payment (one-tap using saved card, bypasses full checkout) | M3 Payment — new task #25 | 4h |
 
-### Time Estimate Corrections (7 adjustments, +40h)
+### Time Estimate Corrections (8 adjustments, +42h)
 
 | Task | Module | Old | New | Δ | Reason |
 |------|--------|-----|-----|---|--------|
@@ -35,6 +37,7 @@
 | Per-trip earnings breakdown | M6 Rider #26 | 8h | 12h | +4h | Real-time base/distance/time/surge/boost/tip calculation |
 | WhatsApp Business API setup | M8 WhatsApp #1 | 12h | 20h | +8h | Meta approval process + template setup + webhook |
 | Live location on map | M4 Order Tracking #5 | 16h | 20h | +4h | GPS + WebSocket + battery-efficient polling |
+| AI side dish / upsell suggestion | M8 AI Engine #3 | 12h | 14h | +2h | Revenue impact tracking for merchant dashboard |
 
 ### Duplicate Merges (3 resolved, −8h)
 
@@ -52,12 +55,36 @@
 | M3 Cart | Promo mechanics (#14-18) moved after #5 (auto-applied discounts) |
 | M1 Customer Account | UGC tasks (#12-14) moved after #4 (rate & review) |
 
-### Arithmetic Correction
+### Arithmetic Corrections (Round 3 — systematic module re-sums)
 
-| Metric | Previous (file) | Actual Sum | Corrected |
-|--------|----------------|------------|-----------|
-| Total hours | 2,512h | 2,492h (20h over) | 2,608h |
-| Total cost | £176,700 | — | £195,600 |
+| Module | Header Value | Actual Task Sum | Correction |
+|--------|-------------|----------------|------------|
+| M2 Browse & Discovery | 168h | 186h | +18h |
+| M2 Menu System | 120h | 126h | +6h |
+| M3 Cart | 96h | 102h | +6h |
+| M3 Checkout | 124h | 130h | +6h |
+| M3 Payment & Wallet | 184h | 240h | +56h |
+| M4 Order Tracking & Notifications | 124h | 140h | +16h |
+| M5 Merchant Dashboard Web | 276h | 288h | +12h |
+| M6 Rider App | 296h | 374h | +78h |
+| M7 Admin & Operations Console | 282h | 286h | +4h |
+| **Total cumulative** | **2,512h** | **2,812h** | **+300h** |
+
+### Absorbed Low-Severity Items (9 items, no new tasks)
+
+The following v2 features are implementation details already covered by existing v3 tasks:
+
+| v2 Ref | Feature | Absorbed Into |
+|--------|---------|---------------|
+| v2:87 | "Best match" algorithmic sorting | M2 Browse #10 — sort options augmented |
+| v2:475 | 6-month subscription plan (select markets) | M7 Subscriptions #1 — plan variants |
+| v2:505 | Priority support access (Uber One benefit) | M7 Subscriptions #6 — benefits engine |
+| v2:559 | Pay online or at restaurant (pickup) | M2 Menu #3-6 — pickup flow |
+| v2:700 | Co-branded credit card marketing for merchants | M5 Dashboard #25 — financial portal |
+| v2:711 | Dedicated deals hub | M2 Browse #6 — promotional banners |
+| v2:806 | Delivery bag branding (rider) | M6 Rider #37 — equipment ordering portal |
+| v2:891 | Weekly earnings targets/challenges (rider) | M6 Rider #26-28 — earnings views |
+| v2:1058 | Unified reporting, billing, settlements | M3 Payment #20 — multi-acquirer + M5 Dashboard #13 — payouts |
 
 ---
 
@@ -112,9 +139,9 @@
 ---
 
 ## Milestone 2: Core Customer Experience
-**Modules: Browse & Discovery (168h) + Menu System (120h) = 288h | £21,600**
+**Modules: Browse & Discovery (186h) + Menu System (126h) = 312h | £23,400**
 
-### Browse & Discovery — 168h
+### Browse & Discovery — 186h
 
 | # | Task | Hours |
 |---|------|-------|
@@ -138,7 +165,7 @@
 | 18 | Dedicated grocery tab with category browsing (dairy, produce, snacks) | 10h |
 | 19 | Near-me auto-detect restaurants (geolocation) | 8h |
 
-### Menu System — 120h
+### Menu System — 126h
 
 | # | Task | Hours |
 |---|------|-------|
@@ -166,9 +193,9 @@
 ---
 
 ## Milestone 3: Cart, Checkout & Payments
-**Modules: Cart (96h) + Checkout (124h) + Payment & Wallet (184h) = 404h | £30,300**
+**Modules: Cart (102h) + Checkout (130h) + Payment & Wallet (240h) = 472h | £35,400**
 
-### Cart — 96h
+### Cart — 102h
 
 | # | Task | Hours |
 |---|------|-------|
@@ -191,7 +218,7 @@
 | 17 | Save cart for later | 6h |
 | 18 | Cart upsell placement (before checkout) | 4h |
 
-### Checkout — 124h
+### Checkout — 130h
 
 | # | Task | Hours |
 |---|------|-------|
@@ -215,7 +242,7 @@
 | 18 | Order note + cutlery opt-in | 2h |
 | 19 | Checkout for someone else | 4h |
 
-### Payment & Wallet — 184h
+### Payment & Wallet — 240h
 
 | # | Task | Hours |
 |---|------|-------|
@@ -243,13 +270,14 @@
 | 22 | Card on delivery (offline payment, select markets) | 4h |
 | 23 | Auto-payment on delivery confirmation (trigger charge on delivery completion) | 4h |
 | 24 | Fiserv + Cybersource payment processing & tokenisation integration | 8h |
+| 25 | Single-click reorder payment (one-tap payment using saved card, bypasses full checkout flow) | 4h |
 
 ---
 
 ## Milestone 4: Order Management & Tracking
-**Modules: Order Tracking & Notifications (124h) + Group Ordering (112h) = 236h | £17,700**
+**Modules: Order Tracking & Notifications (140h) + Group Ordering (112h) = 252h | £18,900**
 
-### Order Tracking & Notifications — 124h
+### Order Tracking & Notifications — 140h
 
 | # | Task | Hours |
 |---|------|-------|
@@ -292,9 +320,9 @@
 ---
 
 ## Milestone 5: Merchant Tools
-**Modules: Merchant Dashboard Web (276h) + Merchant Order Management (160h) = 436h | £32,700**
+**Modules: Merchant Dashboard Web (288h) + Merchant Order Management (160h) = 448h | £33,600**
 
-### Merchant Dashboard Web — 276h
+### Merchant Dashboard Web — 288h
 
 | # | Task | Hours |
 |---|------|-------|
@@ -331,6 +359,7 @@
 | 31 | Dark kitchen / virtual restaurant onboarding & management (delivery-only brand creation, kitchen network management) | 10h |
 | 32 | Customer claims transparency dashboard & reviews-based recommendations | 8h |
 | 33 | Merchant performance benchmarking vs peers | 6h |
+| 34 | Merchant notification preferences — configure alerts for store status, connectivity, POS issues, cancellations, missed/inaccurate orders | 6h |
 
 ### Merchant Order Management — 160h
 
@@ -359,9 +388,9 @@
 ---
 
 ## Milestone 6: Rider App
-**Module: Rider App (296h) | £22,200**
+**Module: Rider App (374h) | £28,050**
 
-### Rider App — 296h
+### Rider App — 374h
 
 | # | Task | Hours |
 |---|------|-------|
@@ -424,9 +453,9 @@
 ---
 
 ## Milestone 7: Admin & Subscriptions
-**Modules: Admin & Operations Console (282h) + Subscriptions & Loyalty (104h) = 386h | £28,950**
+**Modules: Admin & Operations Console (286h) + Subscriptions & Loyalty (104h) = 390h | £29,250**
 
-### Admin & Operations Console — 282h
+### Admin & Operations Console — 286h
 
 | # | Task | Hours |
 |---|------|-------|
@@ -481,15 +510,15 @@
 ---
 
 ## Milestone 8: Advanced Features
-**Modules: AI & Personalisation Engine (258h) + WhatsApp Integration (88h) = 346h | £25,950**
+**Modules: AI & Personalisation Engine (260h) + WhatsApp Integration (88h) = 348h | £26,100**
 
-### AI & Personalisation Engine — 258h
+### AI & Personalisation Engine — 260h
 
 | # | Task | Hours |
 |---|------|-------|
 | 1 | AI-powered personalised restaurant feed (collaborative + content-based filtering, cold start, A/B eval, training pipeline) | 32h |
 | 2 | Predictive reordering (based on order history + contextual signals — ML pipeline) | 24h |
-| 3 | AI side dish / upsell suggestion (based on real order combination data, toggle per restaurant) | 12h |
+| 3 | AI side dish / upsell suggestion (based on real order combination data, toggle per restaurant, revenue impact tracking shown on merchant dashboard) | 14h |
 | 4 | Multi-dimensional context engine (time, weather, past orders, family preferences, loyalty balance, courier availability) | 18h |
 | 5 | AI assistant prompt: "Would you like your usual…?" with smart group ordering (multi-context prompt generation + interaction flow) | 20h |
 | 6 | AI dynamic pricing (demand-based surge — time-series modelling) | 20h |
@@ -521,26 +550,26 @@
 | Milestone | Modules | Hours | Cost (£75/hr) | 50% Advance | 50% on Completion |
 |-----------|---------|-------|--------------|-------------|-------------------|
 | **M1** | Auth & Profile + Customer Account | 216h | £16,200 | £8,100 | £8,100 |
-| **M2** | Browse & Discovery + Menu System | 288h | £21,600 | £10,800 | £10,800 |
-| **M3** | Cart + Checkout + Payment & Wallet | 404h | £30,300 | £15,150 | £15,150 |
-| **M4** | Order Tracking & Notifications + Group Ordering | 236h | £17,700 | £8,850 | £8,850 |
-| **M5** | Merchant Dashboard Web + Merchant Order Mgmt | 436h | £32,700 | £16,350 | £16,350 |
-| **M6** | Rider App | 296h | £22,200 | £11,100 | £11,100 |
-| **M7** | Admin & Operations Console + Subscriptions & Loyalty | 386h | £28,950 | £14,475 | £14,475 |
-| **M8** | AI & Personalisation Engine + WhatsApp Integration | 346h | £25,950 | £12,975 | £12,975 |
-| **Total** | **16 modules** | **2,608h** | **£195,600** | **£97,800** | **£97,800** |
+| **M2** | Browse & Discovery + Menu System | 312h | £23,400 | £11,700 | £11,700 |
+| **M3** | Cart + Checkout + Payment & Wallet | 472h | £35,400 | £17,700 | £17,700 |
+| **M4** | Order Tracking & Notifications + Group Ordering | 252h | £18,900 | £9,450 | £9,450 |
+| **M5** | Merchant Dashboard Web + Merchant Order Mgmt | 448h | £33,600 | £16,800 | £16,800 |
+| **M6** | Rider App | 374h | £28,050 | £14,025 | £14,025 |
+| **M7** | Admin & Operations Console + Subscriptions & Loyalty | 390h | £29,250 | £14,625 | £14,625 |
+| **M8** | AI & Personalisation Engine + WhatsApp Integration | 348h | £26,100 | £13,050 | £13,050 |
+| **Total** | **16 modules** | **2,812h** | **£210,900** | **£105,450** | **£105,450** |
 
 ### QA Audit Change Summary
 
 | Check | Result | What Was Fixed |
 |-------|--------|----------------|
-| 1. All v2 features exist in v3 | **PASS** | Restored 10 missing features (+76h) |
+| 1. All v2 features exist in v3 | **PASS** | Restored 12 missing features (+86h) + 9 absorbed as existing-task notes |
 | 2. No extras beyond v2 | **PASS** | No v2-absent features added |
-| 3. Time estimates realistic | **PASS** | Adjusted 7 underestimates (+40h) |
+| 3. Time estimates realistic | **PASS** | Adjusted 8 underestimates (+42h) |
 | 4. Milestone grouping logical | **PASS** | All 8 milestones retained — M3 grouping justified (coupled modules) |
 | 5. Task ordering correct | **PASS** | Reordered 3 modules (Menu System: pickup earlier; Cart: promos with discounts; Customer Account: UGC after reviews) |
-| 6. No duplicates/contradictions | **PASS** | Merged 3 duplicate pairs (−8h), fixed arithmetic error (2,492≠2,512) |
+| 6. No duplicates/contradictions | **PASS** | Merged 3 duplicate pairs (−8h), fixed systematic arithmetic errors across 9 modules (+300h cumulative) |
 
 ---
 
-*End of document — v3 contains **2,608 task hours** across **16 modules** and **8 payment milestones**. All v2 features audited, gaps closed, estimates corrected, duplicates resolved.*
+*End of document — v3 contains **2,812 task hours** across **16 modules** and **8 payment milestones**. All v2 features audited, gaps closed, estimates corrected, duplicates resolved.*
