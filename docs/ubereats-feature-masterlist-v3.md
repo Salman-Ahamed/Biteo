@@ -18,7 +18,7 @@
 | v2:8 | Dark kitchen / virtual restaurant onboarding & management | M5 Merchant Dashboard — new task #31 | 10h |
 | v2:663-665 | Customer claims transparency dashboard & reviews-based recommendations | M5 Merchant Dashboard — new task #32 | 8h |
 | v2:669 | Merchant performance benchmarking vs peers | M5 Merchant Dashboard — new task #33 | 6h |
-| v2:793,807 | Training completion tracking (rider) | M6 Rider App — new task #53 | 4h |
+| v2:790 | Training completion tracking (rider) | M6 Rider App — new task #53 | 4h |
 | v2:808 | Rider insurance enrolment flow | M6 Rider App — new task #54 | 4h |
 | v2:809 | Tax information submission (rider) | M6 Rider App — new task #55 | 4h |
 | v2:1054 | Auto-payment on delivery confirmation | M3 Payment — new task #23 | 4h |
@@ -45,7 +45,7 @@
 |---|---------------|--------|-------------|
 | 1 | M6 #34 "Uber Eats Pro hub" (14h) + #38 "Uber Eats Pro Programme" (12h) | Merged into single task (22h) | −4h |
 | 2 | M6 #41 "Verification screen at pickup" (4h) + #18 "Order pickup confirmation" (8h) | Absorbed into #18 | −4h |
-| 3 | M6 #42 "Cross-zone delivery" + #45 "Extended delivery opt-in" | Made adjacent (swapped with #43-44) | 0h (reorder only) |
+| 3 | M6 #39 "Cross-zone delivery" + #40 "Extended delivery opt-in" | Made adjacent (swapped with #43-44) | 0h (reorder only) |
 
 ### Task Reorderings (3 modules)
 
@@ -68,23 +68,81 @@
 | M5 Merchant Dashboard Web | 276h | 288h | +12h |
 | M6 Rider App | 296h | 374h | +78h |
 | M7 Admin & Operations Console | 282h | 286h | +4h |
+| M8 AI & Personalisation Engine | 258h | 260h | +2h |
+| **Subtotal (module corrections)** | **2,608h** | **2,810h** | **+204h** |
+| Header-claim alignment (file claimed 2,512h vs module headers 2,608h) | 2,512h | 2,608h | +96h |
 | **Total cumulative** | **2,512h** | **2,812h** | **+300h** |
 
-### Absorbed Low-Severity Items (9 items, no new tasks)
+### Absorbed Low-Severity Items (63 items, no new tasks)
 
 The following v2 features are implementation details already covered by existing v3 tasks:
 
 | v2 Ref | Feature | Absorbed Into |
 |--------|---------|---------------|
 | v2:87 | "Best match" algorithmic sorting | M2 Browse #10 — sort options augmented |
+| v2:225 | Place order button | M3 Checkout — implicit in checkout flow |
+| v2:343-344 | Expired vouchers/promos view + terms | M3 Payment #16 — voucher expiry tracking |
+| v2:353 | Send gift card from within app | M3 Payment #13 — gift card system |
+| v2:356 | Gift card balance converts to Uber Cash | M3 Payment #14 — gift card redemption to wallet |
+| v2:371, 520 | Modify subscription plan (upgrade/downgrade) | M7 Subscriptions #1 — plan management |
+| v2:381 | Delivery person name and photo display | M4 Order Tracking #5 — live location implies driver info |
+| v2:416 | Scan Bill (digital) for pickup auth | M6 Rider #18 — order pickup confirmation |
 | v2:475 | 6-month subscription plan (select markets) | M7 Subscriptions #1 — plan variants |
 | v2:505 | Priority support access (Uber One benefit) | M7 Subscriptions #6 — benefits engine |
+| v2:521 | Modify payment method for subscription | M7 Subscriptions #1 — account management |
+| v2:523 | View savings summary | M7 Subscriptions #6 — benefits engine |
+| v2:540 | Flexible fulfillment (own staff or Uber fleet) | M5 Dashboard #27-30 — marketplace operations |
+| v2:547 | Return an item flow in order history | M5 Dashboard #29 — retail returns flow |
 | v2:559 | Pay online or at restaurant (pickup) | M2 Menu #3-6 — pickup flow |
 | v2:700 | Co-branded credit card marketing for merchants | M5 Dashboard #25 — financial portal |
 | v2:711 | Dedicated deals hub | M2 Browse #6 — promotional banners |
+| v2:750 | Real-time campaign optimisation | M7 Admin #9 — campaign analytics augmented |
+| v2:759 | Adelaide + Kantar attention metric | M7 Admin #19 — brand lift studies framework |
+| v2:760 | In-store traffic measurement | M7 Admin #9 — campaign analytics augmented |
+| v2:761 | Add-to-cart rate measurement | M7 Admin #9 — campaign analytics augmented |
+| v2:770 | Creative management (self-serve ads) | M7 Admin #7 — Ads Manager campaign creation |
+| v2:772 | Ads APIs for campaign management | M7 Admin #7 — Ads Manager |
+| v2:773 | POS integration for ad management | M7 Admin #4 — advertising platform + M5 Order Mgmt #19 — POS |
+| v2:774 | CPG brand direct access | M7 Admin #7 — self-serve Ads Manager |
 | v2:806 | Delivery bag branding (rider) | M6 Rider #37 — equipment ordering portal |
+| v2:821, 853 | Destination transparency (riders) | M6 Rider #10 — order details display |
+| v2:824 | 6-hour offline reset for driving limit | M6 Rider #33 — driving limit enforcement |
+| v2:828 | Minimum session hours (select markets) | M6 Rider #41 — shift allocation |
+| v2:860 | Second offer hidden until first accepted | M6 Rider #12 — batched courier offers |
 | v2:891 | Weekly earnings targets/challenges (rider) | M6 Rider #26-28 — earnings views |
+| v2:925 | Rider perks and deals page | M6 Rider #34 — Pro Programme |
+| v2:926 | Rider events and happenings page | M6 Rider #36 — help centre + community forums |
+| v2:1000 | Courier performance analytics | M7 Admin #13 — BI reporting dashboard |
+| v2:1034 | Bank transfer (payment method) | M3 Payment #4-6 — payment methods |
 | v2:1058 | Unified reporting, billing, settlements | M3 Payment #20 — multi-acquirer + M5 Dashboard #13 — payouts |
+| v2:1085, 1087, 1088 | Fuel surcharge / rider fee / platform fee | M3 Cart #2 — fee line items |
+| v2:1100 | Registration fee (merchant commission) | M5 Dashboard #23 — commission & fee plan |
+| v2:474 | No refunds for partial months (subscription) | M7 Subscriptions #5 — cancellation policy |
+| v2:488 | Uber One icon on eligible stores/items | M7 Subscriptions #6 — benefits engine |
+| v2:713 | Reorder Rewards (post-purchase incentive) | M3 Cart #10 — surprise reward mechanics |
+| v2:722 | Order tracking page ad placement | M7 Admin #4 — in-app advertising platform |
+| v2:724 | Full-page interstitial ad | M7 Admin #4 — in-app advertising platform |
+| v2:726 | Payment method promotion at checkout | M7 Admin #4 — in-app advertising platform |
+| v2:937 | Seat belt reminders | M6 Rider #32 — safety toolkit |
+| v2:939 | PPE distribution partnerships | M6 Rider #46 — PPE distribution / helmet initiatives / safety kits |
+| v2:1072 | CTBC Bank co-branded credit card (Taiwan) | M7 Subscriptions #10 — credit card partnerships |
+| v2:1073 | HSBC cashback partnership (select markets, weekends) | M7 Subscriptions #10 — credit card partnerships |
+| v2:1074 | Funding Societies merchant financing | M5 Dashboard #25 — merchant financial portal |
+| v2:1075 | AEON Bank merchant financing | M5 Dashboard #25 — merchant financial portal |
+| v2:1203 | Uber rides app integration (cross-promotion) | M7 Admin #28 — cross-platform marketing programmes |
+| v2:1207 | Bundled offers (ride + meal) | M7 Admin #28 — cross-platform marketing programmes |
+| v2:1208 | Eats for the Way | M7 Admin #28 — cross-platform marketing programmes |
+| v2:119 | Uber One-exclusive offers badge on restaurant card | M2 Browse #12 — restaurant card promo badge |
+| v2:444 | "New restaurant in area" promotional notification | M4 Order Tracking #13 — promotional notification engine |
+| v2:459 | Account security alert (new login) | M1 Auth #11 — Privacy Center account notifications |
+| v2:942 | Safety workshops and training | M6 Rider #44-46 — safety toolkit & PPE initiatives |
+| v2:1149 | yuu Rewards Club (Taiwan partner) | M7 Subscriptions #10 — credit card & loyalty partnerships |
+| v2:1175 | Full cash refund policy for missing/incorrect orders (California AB 578) | M3 Payment #21 — refund policy engine |
+| v2:502 | Voucher/promo refund on order cancellation (Uber One benefit) | M3 Payment #21 — refund policy engine |
+| v2:503 | Uber One exclusive tables at select Dine Out restaurants (AU) | M7 Subscriptions #6 — benefits engine |
+| v2:524 | Terms & conditions per market (subscription) | M7 Subscriptions #1 — plan management |
+| v2:614 | Customer reviews (read and respond) | M5 Dashboard #32 — reviews-based recommendations |
+| v2:820 | Scheduled sessions (market-specific) | M6 Rider #41 — shift allocation / schedule booking system |
 
 ---
 
@@ -145,7 +203,7 @@ The following v2 features are implementation details already covered by existing
 
 | # | Task | Hours |
 |---|------|-------|
-| 1 | Curated personalised restaurant feed (collaborative + content-based filtering, cold start, A/B eval) | 32h |
+| 1 | Curated personalised restaurant feed frontend (rendering personalised ranking display, A/B test integration) | 32h |
 | 2 | "Previously ordered" section | 6h |
 | 3 | "Popular near you" / "Trending" sections | 12h |
 | 4 | "New on platform" section | 4h |
@@ -516,7 +574,7 @@ The following v2 features are implementation details already covered by existing
 
 | # | Task | Hours |
 |---|------|-------|
-| 1 | AI-powered personalised restaurant feed (collaborative + content-based filtering, cold start, A/B eval, training pipeline) | 32h |
+| 1 | AI-powered personalised restaurant feed ML pipeline (collaborative + content-based filtering, cold start optimisation, A/B evaluation framework, model training pipeline) | 32h |
 | 2 | Predictive reordering (based on order history + contextual signals — ML pipeline) | 24h |
 | 3 | AI side dish / upsell suggestion (based on real order combination data, toggle per restaurant, revenue impact tracking shown on merchant dashboard) | 14h |
 | 4 | Multi-dimensional context engine (time, weather, past orders, family preferences, loyalty balance, courier availability) | 18h |
@@ -563,12 +621,16 @@ The following v2 features are implementation details already covered by existing
 
 | Check | Result | What Was Fixed |
 |-------|--------|----------------|
-| 1. All v2 features exist in v3 | **PASS** | Restored 12 missing features (+86h) + 9 absorbed as existing-task notes |
+| 1. All v2 features exist in v3 | **PASS** | Restored 12 missing features (+86h) + 64 absorbed as existing-task notes (52 from Round 3 final audit) |
 | 2. No extras beyond v2 | **PASS** | No v2-absent features added |
 | 3. Time estimates realistic | **PASS** | Adjusted 8 underestimates (+42h) |
 | 4. Milestone grouping logical | **PASS** | All 8 milestones retained — M3 grouping justified (coupled modules) |
 | 5. Task ordering correct | **PASS** | Reordered 3 modules (Menu System: pickup earlier; Cart: promos with discounts; Customer Account: UGC after reviews) |
-| 6. No duplicates/contradictions | **PASS** | Merged 3 duplicate pairs (−8h), fixed systematic arithmetic errors across 9 modules (+300h cumulative) |
+| 6. No duplicates/contradictions | **PASS** | Merged 3 duplicate pairs (−8h), fixed systematic arithmetic errors across 10 modules (+300h cumulative) |
+| 7. Round 3 final independent audit | **PASS** | 14 more minor features absorbed (+52 total), arithmetic corrections reconciled (+300h cumulative) |
+| 8. Round 4 final independent audit | **PASS** | Fixed v2:793,807→v2:790 ref error; 6 more minor features absorbed (+58 total) |
+| 9. Round 5 final independent audit | **PASS** | 5 more minor features absorbed (v2:502,503,524,614,820) — all absorbable, no new tasks needed (+63 total) |
+| 10. Round 6 — final independent audit | **PASS** | Absorbed v2:726 into M7 Admin #4 (+64 total); distinguished M2 Browse #1 frontend vs M8 AI #1 ML pipeline descriptions; fixed stale merge refs (v3:48); corrected QA count (54→52) |
 
 ---
 
