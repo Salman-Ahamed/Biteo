@@ -12,7 +12,7 @@
 
 - **Phase 1–2** are required before any pilot launch.
 - **Phase 3** is the first major post-core feature set and includes the highlighted WhatsApp AI assistant, voice-recorded ordering, and scan order capabilities.
-- **Phase 4** handles dispatch and live tracking using web and WhatsApp only — no native rider app for the pilot.
+- **Phase 4** handles dispatch and live tracking using a React Native rider app plus a web dispatcher console.
 - **Phase 5** adds growth, personalisation, and advanced AI.
 - **Phase 6** adds scale features such as POS integrations, kitchen display system, and AI-driven tools.
 
@@ -298,44 +298,47 @@
 
 ---
 
-## Phase 4 — Dispatch & Live Tracking (Web + WhatsApp, No Native App)
+## Phase 4 — Dispatch & Live Tracking (React Native Rider App + Web Dispatcher)
 
-**Goal:** deliver orders end-to-end using a web dashboard for dispatchers and WhatsApp for riders.
-**Duration estimate:** 4–5 weeks.
+**Goal:** deliver orders end-to-end using a React Native rider app for execution and a web dispatcher console for control and exceptions.
+**Duration estimate:** 6–7 weeks.
 **Depends on:** Phase 1.
 
-### 4.1 Web-Based Rider Management
+### 4.1 Dispatcher Web Console
 
-| Feature / Sub-task                          | Manual hrs | AI hrs |   Manual $ |     AI $ |
-| ------------------------------------------- | ---------- | -----: | ---------: | -------: |
-| Rider registration & document upload        | 32         |      6 |       $960 |     $180 |
-| Rider web dashboard (login, online/offline) | 40         |      8 |     $1,200 |     $240 |
-| Incoming order request view                 | 24         |      5 |       $720 |     $150 |
-| Accept / decline order                      | 16         |      3 |       $480 |      $90 |
-| Order queue for rider                       | 16         |      3 |       $480 |      $90 |
-| **Subtotal**                                | **128**    | **25** | **$3,840** | **$750** |
+| Feature / Sub-task             | Manual hrs | AI hrs |   Manual $ |     AI $ |
+| ------------------------------ | ---------- | -----: | ---------: | -------: |
+| Delivery zone / radius rules   | 24         |      5 |       $720 |     $150 |
+| Manual rider assignment        | 24         |      5 |       $720 |     $150 |
+| Live tracking dashboard        | 40         |      8 |     $1,200 |     $240 |
+| Exception queue view & actions | 40         |      8 |     $1,200 |     $240 |
+| **Subtotal**                   | **128**    | **26** | **$3,840** | **$780** |
 
-### 4.2 Pickup & Delivery Flow via Web + WhatsApp
+### 4.2 React Native Rider App
 
-| Feature / Sub-task                     | Manual hrs | AI hrs |   Manual $ |     AI $ |
-| -------------------------------------- | ---------- | -----: | ---------: | -------: |
-| Navigate to merchant (map link)        | 16         |      3 |       $480 |      $90 |
-| Pickup confirmation with scan/photo    | 24         |      5 |       $720 |     $150 |
-| Navigate to customer (map link)        | 16         |      3 |       $480 |      $90 |
-| Delivery confirmation with photo proof | 24         |      5 |       $720 |     $150 |
-| "Leave at door" photo capture          | 16         |      3 |       $480 |      $90 |
-| WhatsApp status updates to rider       | 24         |      5 |       $720 |     $150 |
-| **Subtotal**                           | **120**    | **24** | **$3,600** | **$720** |
+| Feature / Sub-task                              | Manual hrs |  AI hrs |    Manual $ |       AI $ |
+| ----------------------------------------------- | ---------- | ------: | ----------: | ---------: |
+| React Native scaffold + navigation + auth       | 80         |      16 |      $2,400 |       $480 |
+| Online/offline toggle + push notifications      | 48         |      10 |      $1,440 |       $300 |
+| Incoming order request + accept/decline         | 48         |      10 |      $1,440 |       $300 |
+| Turn-by-turn navigation (Google Maps / Mapbox)  | 64         |      13 |      $1,920 |       $390 |
+| Pickup confirmation (scan + photo)              | 56         |      11 |      $1,680 |       $330 |
+| Delivery confirmation (photo + OTP / signature) | 56         |      11 |      $1,680 |       $330 |
+| Live GPS location streaming to platform         | 48         |      10 |      $1,440 |       $300 |
+| In-app chat / call masking with customer        | 48         |      10 |      $1,440 |       $300 |
+| Earnings view                                   | 32         |       6 |        $960 |       $180 |
+| Order history                                   | 24         |       5 |        $720 |       $150 |
+| **Subtotal**                                    | **504**    | **102** | **$15,120** | **$3,060** |
 
 ### 4.3 Customer Live Tracking
 
-| Feature / Sub-task                       | Manual hrs | AI hrs |   Manual $ |     AI $ |
-| ---------------------------------------- | ---------- | -----: | ---------: | -------: |
-| Map view on web checkout/status page     | 40         |      8 |     $1,200 |     $240 |
-| Rider location sharing (web geolocation) | 32         |      6 |       $960 |     $180 |
-| ETA countdown                            | 24         |      5 |       $720 |     $150 |
-| Route display                            | 24         |      5 |       $720 |     $150 |
-| **Subtotal**                             | **120**    | **24** | **$3,600** | **$720** |
+| Feature / Sub-task                   | Manual hrs | AI hrs |   Manual $ |     AI $ |
+| ------------------------------------ | ---------- | -----: | ---------: | -------: |
+| Map view on customer web status page | 40         |      8 |     $1,200 |     $240 |
+| Rider GPS location consumption       | 32         |      6 |       $960 |     $180 |
+| ETA countdown                        | 24         |      5 |       $720 |     $150 |
+| Route display                        | 24         |      5 |       $720 |     $150 |
+| **Subtotal**                         | **120**    | **24** | **$3,600** | **$720** |
 
 ### 4.4 AI Route Optimisation
 
@@ -344,8 +347,8 @@
 | Multi-stop route suggestions for dispatcher | 40         |      8 |     $1,200 |     $240 |
 | Traffic-aware ETA calculation               | 40         |      8 |     $1,200 |     $240 |
 | Batchable order detection                   | 32         |      6 |       $960 |     $180 |
-| Suggested dispatch assignments              | 24         |      5 |       $720 |     $150 |
-| **Subtotal**                                | **136**    | **27** | **$4,080** | **$810** |
+| In-app route guidance for rider             | 32         |      6 |       $960 |     $180 |
+| **Subtotal**                                | **144**    | **28** | **$4,320** | **$840** |
 
 ### 4.5 Exception Handling
 
@@ -357,7 +360,7 @@
 | Failed delivery return flow      | 24         |      5 |       $720 |     $150 |
 | **Subtotal**                     | **72**     | **14** | **$2,160** | **$420** |
 
-**Phase 4 Total:** 576 manual hrs → **$17,280** | 114 AI hrs → **$3,420**
+**Phase 4 Total:** 968 manual hrs → **$29,040** | 194 AI hrs → **$5,820**
 
 ---
 
@@ -473,10 +476,10 @@
 
 ### 6.5 AI-Based Social Media Ads
 
-| Feature / Sub-task        | Manual hrs | AI hrs |   Manual $ |       AI $ |
-| ------------------------- | ---------- | -----: | ---------: | ---------: |
-| Ad creative generation    | 40         |      8 |     $1,200 |       $240 |
-| Caption / copy generation | 24         |      5 |       $720 |       $150 |
+| Feature / Sub-task        | Manual hrs | AI hrs |   Manual $ |     AI $ |
+| ------------------------- | ---------- | -----: | ---------: | -------: |
+| Ad creative generation    | 40         |      8 |     $1,200 |     $240 |
+| Caption / copy generation | 24         |      5 |       $720 |     $150 |
 | **Subtotal**              | **64**     | **13** | **$1,920** | **$390** |
 
 **Phase 6 Total:** 544 manual hrs → **$16,320** | 108 AI hrs → **$3,240**
@@ -485,15 +488,15 @@
 
 ## Master Summary Table
 
-| Phase                                               | Manual hrs |    AI hrs |  Manual Cost |     AI Cost | Calendar Weeks |
-| --------------------------------------------------- | ---------: | --------: | -----------: | ----------: | -------------: |
-| Phase 1 — Foundation & Core Order Flow              |      1,584 |       316 |      $47,520 |      $9,480 |           8–10 |
-| Phase 2 — Merchant Admin & Ops Dashboard            |        560 |       112 |      $16,800 |      $3,360 |            4–5 |
-| Phase 3 — WhatsApp AI, Voice & Scan                 |        864 |       173 |      $25,920 |      $5,190 |            5–6 |
-| Phase 4 — Dispatch & Live Tracking (Web + WhatsApp) |        576 |       114 |      $17,280 |      $3,420 |            4–5 |
-| Phase 5 — Growth & AI Personalisation               |        640 |       127 |      $19,200 |      $3,810 |            5–6 |
-| Phase 6 — Scale & Ecosystem                         |        544 |       108 |      $16,320 |      $3,240 |            6–8 |
-| **TOTAL**                                           |  **4,868** |   **950** | **$146,040** | **$28,500** |      **32–40** |
+| Phase                                                       | Manual hrs |    AI hrs |  Manual Cost |     AI Cost | Calendar Weeks |
+| ----------------------------------------------------------- | ---------: | --------: | -----------: | ----------: | -------------: |
+| Phase 1 — Foundation & Core Order Flow                      |      1,584 |       316 |      $47,520 |      $9,480 |           8–10 |
+| Phase 2 — Merchant Admin & Ops Dashboard                    |        560 |       112 |      $16,800 |      $3,360 |            4–5 |
+| Phase 3 — WhatsApp AI, Voice & Scan                         |        864 |       173 |      $25,920 |      $5,190 |            5–6 |
+| Phase 4 — Dispatch & Live Tracking (React Native App + Web) |        968 |       194 |      $29,040 |      $5,820 |            6–7 |
+| Phase 5 — Growth & AI Personalisation                       |        640 |       127 |      $19,200 |      $3,810 |            5–6 |
+| Phase 6 — Scale & Ecosystem                                 |        544 |       108 |      $16,320 |      $3,240 |            6–8 |
+| **TOTAL**                                                   |  **5,260** | **1,028** | **$157,800** | **$30,840** |      **34–42** |
 
 ### Pilot launch scope (Phases 1–3)
 
