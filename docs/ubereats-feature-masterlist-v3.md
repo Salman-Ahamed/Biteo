@@ -1,6 +1,154 @@
 # Uber Eats Feature Masterlist — v3 (Client Proposal)
 
-## Milestone 1: Auth & Account Foundation
+## Milestone 0: Project Setup
+
+| # | Task | Est. Time |
+|---|------|-----------|
+| 1 | Repository setup and monorepo configuration | 4h |
+| 2 | Development environment and Docker setup | 6h |
+| 3 | CI/CD pipeline setup (GitHub Actions, EAS Build) | 8h |
+| 4 | Cloud infrastructure provisioning (AWS/GCP) | 8h |
+| 5 | Database schema design and migration framework | 8h |
+| 6 | Authentication service integration (Clerk) | 6h |
+| 7 | API framework, routing, and middleware setup | 6h |
+| 8 | Mobile app shell (Expo/React Native) | 6h |
+| 9 | Monitoring, logging, and error tracking | 4h |
+| 10 | Third-party service integrations scaffolding | 4h |
+|    | **Subtotal** | **60h** |
+
+---
+
+## Milestone 1: Merchant & Rider
+
+### Merchant Dashboard Web
+
+| # | Task | Est. Time |
+|---|------|-----------|
+| 1 | Sales overview dashboard (daily/weekly/monthly) | 14h |
+| 2 | Real-time order feed with status badges | 10h |
+| 3 | Menu management: add/edit/remove items, categories, modifiers | 16h |
+| 4 | Bulk menu upload (CSV/XLSX) | 10h |
+| 5 | Menu sync via API | 8h |
+| 6 | Price update + AI-enhanced food photos | 8h |
+| 7 | Set menu availability hours + holiday closure schedule | 6h |
+| 8 | Item-level availability toggle (real-time stock) | 8h |
+| 9 | Set delivery radius + regular/holiday hours | 6h |
+| 10 | Performance analytics: top sellers, slow movers | 12h |
+| 11 | Customer insights: ordering behaviour, trends, retention | 12h |
+| 12 | Revenue reports + peak hours analysis | 10h |
+| 13 | Payouts view: balance, payment history, earnings breakdown | 10h |
+| 14 | Marketing campaign performance metrics | 8h |
+| 15 | Ad performance metrics (Ads Manager) | 10h |
+| 16 | Scheduled reporting (automated KPI reports via email) | 8h |
+| 17 | Customer groups data (geographic segmentation) | 8h |
+| 18 | New vs returning customer segmentation | 6h |
+| 19 | Pricing recommendations tool | 8h |
+| 20 | Store info management (address, pickup instructions, contact) | 8h |
+| 21 | Staff-facing stock visibility dashboard (real-time remaining counts per item, kitchen/admin view) | 6h |
+| 22 | Restaurant close reminder (list out-of-stock items, prompt re-enable next day) | 6h |
+| 23 | Commission & fee plan management (Lite 20%, Plus 25%, Premium 30%, pickup 7%, custom rates, regional rules) | 20h |
+| 24 | Transparent fee breakdown display on merchant reports | 4h |
+| 25 | Merchant financial portal (financing partnerships, working capital programmes) | 10h |
+| 26 | Chargeback dispute process UI (view, respond, track) | 4h |
+| 27 | Marketplace: catalog integration via API/SFTP | 8h |
+| 28 | Marketplace: real-time inventory sync | 6h |
+| 29 | Marketplace: retail returns flow management (eligibility, courier pickup, instant refund) | 4h |
+| 30 | Marketplace: fashion/grocery category support | 4h |
+| 31 | Dark kitchen / virtual restaurant onboarding & management (delivery-only brand creation, kitchen network management) | 10h |
+| 32 | Customer claims transparency dashboard & reviews-based recommendations | 8h |
+| 33 | Merchant performance benchmarking vs peers | 6h |
+| 34 | Merchant notification preferences — configure alerts for store status, connectivity, POS issues, cancellations, missed/inaccurate orders | 6h |
+|    | **Subtotal** | **288h** |
+
+### Merchant Order Management
+
+| # | Task | Est. Time |
+|---|------|-----------|
+| 1 | Incoming order queue with sound alert | 10h |
+| 2 | Accept/decline order with reason selection | 8h |
+| 3 | Mark order as preparing → ready | 6h |
+| 4 | Estimated preparation time update | 6h |
+| 5 | Alert nearby delivery people when order ready | 8h |
+| 6 | Delay order with ETA update to customer | 6h |
+| 7 | Cancel order (by merchant) with reason + propagate to customer | 8h |
+| 8 | Item availability toggle (out-of-stock in real-time) | 6h |
+| 9 | View order notes + customer special instructions | 4h |
+| 10 | Live Order Chat between merchant and customer | 12h |
+| 11 | Track delivery person in real-time (map view) | 10h |
+| 12 | View delivery person contact info + wait time | 6h |
+| 13 | Incoming + scheduled order management view | 8h |
+| 14 | Print order receipt (auto-print config per merchant) | 8h |
+| 15 | Tablet-based responsive UI (iPad/Android tablet) | 12h |
+| 16 | Training guide / in-app how-to | 4h |
+| 17 | Order history with search/filter | 8h |
+| 18 | KDS (Kitchen Display System) web view | 10h |
+| 19 | POS Integration — two-way sync with restaurant POS systems (order push, status sync, menu sync) | 20h |
+|    | **Subtotal** | **160h** |
+
+### Rider App
+
+| # | Task | Est. Time |
+|---|------|-----------|
+| 1 | Rider registration: document upload (ID, licence, vehicle insurance) | 12h |
+| 2 | Identity verification + background check integration | 8h |
+| 3 | Vehicle registration (bicycle, scooter, car, motorbike, walker) | 8h |
+| 4 | Minimum age / SSN / Fair Chance Act compliance checks | 4h |
+| 5 | Go online/offline toggle | 6h |
+| 6 | Zone/area selection | 6h |
+| 7 | Session start confirmation + end summary | 8h |
+| 8 | Break mode + auto-logout after inactivity | 6h |
+| 9 | Incoming order request (notification + sound) | 8h |
+| 10 | Order details: merchant name, customer address, distance, earnings | 8h |
+| 11 | Accept/decline with auto-accept timer | 8h |
+| 12 | Order queue (multiple orders, batched courier offers) | 10h |
+| 13 | Travel time / navigation start confirmation | 6h |
+| 14 | In-app turn-by-turn navigation (Google Maps SDK) | 14h |
+| 15 | Google Maps / Waze deep link integration | 6h |
+| 16 | Optimised route suggestion (multi-order) | 10h |
+| 17 | Real-time traffic data integration | 6h |
+| 18 | Order pickup confirmation + item verification screen (QR code / photo) | 12h |
+| 19 | Navigate to customer | 4h |
+| 20 | Delivery confirmation + proof of delivery (photo) | 8h |
+| 21 | "Leave at door" photo capture | 6h |
+| 22 | Call customer (in-app call masking) | 6h |
+| 23 | Message customer (in-app chat) | 8h |
+| 24 | Contact support during delivery | 4h |
+| 25 | Return order flow (if delivery fails) | 8h |
+| 26 | Earnings view: per-trip breakdown (base, distance, time, surge, boost, quest, tip — real-time) | 12h |
+| 27 | Daily/weekly earnings summary + monthly report | 8h |
+| 28 | Surge pricing + boost promotion earnings display | 8h |
+| 29 | Quest incentives (X deliveries = bonus) tracking | 8h |
+| 30 | Instant pay / on-demand payout | 8h |
+| 31 | Weekly direct deposit setup | 6h |
+| 32 | Safety toolkit: audio recording, share trip with trusted contact, emergency button | 12h |
+| 33 | 12-hour daily driving limit enforcement + countdown notifications | 6h |
+| 34 | Uber Eats Pro Programme (4-tier: Green/Gold/Platinum/Diamond, criteria config, progress tracker, hub, rewards, evaluation engine, seasonal resets) | 22h |
+| 35 | Refer-a-friend programme with tracking dashboard | 8h |
+| 36 | Help centre + driver community forums | 6h |
+| 37 | Rider equipment ordering portal | 4h |
+| 38 | Trip planner at pickup — batch/multi-order route management | 6h |
+| 39 | Cross-zone delivery support | 4h |
+| 40 | Extended delivery opt-in (longer-distance orders) | 2h |
+| 41 | Shift allocation / schedule booking system | 6h |
+| 42 | Score-based scheduling (performance affects shift access) | 4h |
+| 43 | Siri Shortcuts integration (call customer, go online, earnings) | 4h |
+| 44 | Safety: Aura on-demand emergency response platform integration | 6h |
+| 45 | Safety: Predictive risk prevention (telematics data, motion-based risk signals) | 6h |
+| 46 | Safety: PPE distribution partnerships / helmet initiatives / safety kits | 4h |
+| 47 | Streamlined single drop-off flow | 4h |
+| 48 | Drop-off problem resolution screen | 4h |
+| 49 | Proof of delivery via QR code (alternative to photo) | 4h |
+| 50 | Rider compliance page (penalties, fines, demerit points) | 4h |
+| 51 | Traffic rule refreshers + e-bike compliance guidelines in-app | 4h |
+| 52 | New joiner fee / referral fee information pages | 2h |
+| 53 | Training completion tracking | 4h |
+| 54 | Rider insurance enrolment flow | 4h |
+| 55 | Tax information submission | 4h |
+|    | **Subtotal** | **374h** |
+
+---
+
+## Milestone 2: Frontend Customer Experience
 
 ### Auth & Profile
 
@@ -39,10 +187,6 @@
 | 13 | Follow/unfollow with quick-access tab | 6h |
 | 14 | Saved collection for later browsing | 6h |
 |    | **Subtotal** | **96h** |
-
----
-
-## Milestone 2: Core Customer Experience
 
 ### Browse & Discovery
 
@@ -97,7 +241,7 @@
 
 ---
 
-## Milestone 3: Cart, Checkout & Payments
+## Milestone 3: Core Transaction Flow
 
 ### Cart
 
@@ -179,10 +323,6 @@
 | 25 | Single-click reorder payment (one-tap payment using saved card, bypasses full checkout flow) | 4h |
 |    | **Subtotal** | **240h** |
 
----
-
-## Milestone 4: Order Management & Tracking
-
 ### Order Tracking & Notifications
 
 | # | Task | Est. Time |
@@ -227,141 +367,7 @@
 
 ---
 
-## Milestone 5: Merchant Tools
-
-### Merchant Dashboard Web
-
-| # | Task | Est. Time |
-|---|------|-----------|
-| 1 | Sales overview dashboard (daily/weekly/monthly) | 14h |
-| 2 | Real-time order feed with status badges | 10h |
-| 3 | Menu management: add/edit/remove items, categories, modifiers | 16h |
-| 4 | Bulk menu upload (CSV/XLSX) | 10h |
-| 5 | Menu sync via API | 8h |
-| 6 | Price update + AI-enhanced food photos | 8h |
-| 7 | Set menu availability hours + holiday closure schedule | 6h |
-| 8 | Item-level availability toggle (real-time stock) | 8h |
-| 9 | Set delivery radius + regular/holiday hours | 6h |
-| 10 | Performance analytics: top sellers, slow movers | 12h |
-| 11 | Customer insights: ordering behaviour, trends, retention | 12h |
-| 12 | Revenue reports + peak hours analysis | 10h |
-| 13 | Payouts view: balance, payment history, earnings breakdown | 10h |
-| 14 | Marketing campaign performance metrics | 8h |
-| 15 | Ad performance metrics (Ads Manager) | 10h |
-| 16 | Scheduled reporting (automated KPI reports via email) | 8h |
-| 17 | Customer groups data (geographic segmentation) | 8h |
-| 18 | New vs returning customer segmentation | 6h |
-| 19 | Pricing recommendations tool | 8h |
-| 20 | Store info management (address, pickup instructions, contact) | 8h |
-| 21 | Staff-facing stock visibility dashboard (real-time remaining counts per item, kitchen/admin view) | 6h |
-| 22 | Restaurant close reminder (list out-of-stock items, prompt re-enable next day) | 6h |
-| 23 | Commission & fee plan management (Lite 20%, Plus 25%, Premium 30%, pickup 7%, custom rates, regional rules) | 20h |
-| 24 | Transparent fee breakdown display on merchant reports | 4h |
-| 25 | Merchant financial portal (financing partnerships, working capital programmes) | 10h |
-| 26 | Chargeback dispute process UI (view, respond, track) | 4h |
-| 27 | Marketplace: catalog integration via API/SFTP | 8h |
-| 28 | Marketplace: real-time inventory sync | 6h |
-| 29 | Marketplace: retail returns flow management (eligibility, courier pickup, instant refund) | 4h |
-| 30 | Marketplace: fashion/grocery category support | 4h |
-| 31 | Dark kitchen / virtual restaurant onboarding & management (delivery-only brand creation, kitchen network management) | 10h |
-| 32 | Customer claims transparency dashboard & reviews-based recommendations | 8h |
-| 33 | Merchant performance benchmarking vs peers | 6h |
-| 34 | Merchant notification preferences — configure alerts for store status, connectivity, POS issues, cancellations, missed/inaccurate orders | 6h |
-|    | **Subtotal** | **288h** |
-
-### Merchant Order Management
-
-| # | Task | Est. Time |
-|---|------|-----------|
-| 1 | Incoming order queue with sound alert | 10h |
-| 2 | Accept/decline order with reason selection | 8h |
-| 3 | Mark order as preparing → ready | 6h |
-| 4 | Estimated preparation time update | 6h |
-| 5 | Alert nearby delivery people when order ready | 8h |
-| 6 | Delay order with ETA update to customer | 6h |
-| 7 | Cancel order (by merchant) with reason + propagate to customer | 8h |
-| 8 | Item availability toggle (out-of-stock in real-time) | 6h |
-| 9 | View order notes + customer special instructions | 4h |
-| 10 | Live Order Chat between merchant and customer | 12h |
-| 11 | Track delivery person in real-time (map view) | 10h |
-| 12 | View delivery person contact info + wait time | 6h |
-| 13 | Incoming + scheduled order management view | 8h |
-| 14 | Print order receipt (auto-print config per merchant) | 8h |
-| 15 | Tablet-based responsive UI (iPad/Android tablet) | 12h |
-| 16 | Training guide / in-app how-to | 4h |
-| 17 | Order history with search/filter | 8h |
-| 18 | KDS (Kitchen Display System) web view | 10h |
-| 19 | POS Integration — two-way sync with restaurant POS systems (order push, status sync, menu sync) | 20h |
-|    | **Subtotal** | **160h** |
-
----
-
-## Milestone 6: Rider App
-
-### Rider App
-
-| # | Task | Est. Time |
-|---|------|-----------|
-| 1 | Rider registration: document upload (ID, licence, vehicle insurance) | 12h |
-| 2 | Identity verification + background check integration | 8h |
-| 3 | Vehicle registration (bicycle, scooter, car, motorbike, walker) | 8h |
-| 4 | Minimum age / SSN / Fair Chance Act compliance checks | 4h |
-| 5 | Go online/offline toggle | 6h |
-| 6 | Zone/area selection | 6h |
-| 7 | Session start confirmation + end summary | 8h |
-| 8 | Break mode + auto-logout after inactivity | 6h |
-| 9 | Incoming order request (notification + sound) | 8h |
-| 10 | Order details: merchant name, customer address, distance, earnings | 8h |
-| 11 | Accept/decline with auto-accept timer | 8h |
-| 12 | Order queue (multiple orders, batched courier offers) | 10h |
-| 13 | Travel time / navigation start confirmation | 6h |
-| 14 | In-app turn-by-turn navigation (Google Maps SDK) | 14h |
-| 15 | Google Maps / Waze deep link integration | 6h |
-| 16 | Optimised route suggestion (multi-order) | 10h |
-| 17 | Real-time traffic data integration | 6h |
-| 18 | Order pickup confirmation + item verification screen (QR code / photo) | 12h |
-| 19 | Navigate to customer | 4h |
-| 20 | Delivery confirmation + proof of delivery (photo) | 8h |
-| 21 | "Leave at door" photo capture | 6h |
-| 22 | Call customer (in-app call masking) | 6h |
-| 23 | Message customer (in-app chat) | 8h |
-| 24 | Contact support during delivery | 4h |
-| 25 | Return order flow (if delivery fails) | 8h |
-| 26 | Earnings view: per-trip breakdown (base, distance, time, surge, boost, quest, tip — real-time) | 12h |
-| 27 | Daily/weekly earnings summary + monthly report | 8h |
-| 28 | Surge pricing + boost promotion earnings display | 8h |
-| 29 | Quest incentives (X deliveries = bonus) tracking | 8h |
-| 30 | Instant pay / on-demand payout | 8h |
-| 31 | Weekly direct deposit setup | 6h |
-| 32 | Safety toolkit: audio recording, share trip with trusted contact, emergency button | 12h |
-| 33 | 12-hour daily driving limit enforcement + countdown notifications | 6h |
-| 34 | Uber Eats Pro Programme (4-tier: Green/Gold/Platinum/Diamond, criteria config, progress tracker, hub, rewards, evaluation engine, seasonal resets) | 22h |
-| 35 | Refer-a-friend programme with tracking dashboard | 8h |
-| 36 | Help centre + driver community forums | 6h |
-| 37 | Rider equipment ordering portal | 4h |
-| 38 | Trip planner at pickup — batch/multi-order route management | 6h |
-| 39 | Cross-zone delivery support | 4h |
-| 40 | Extended delivery opt-in (longer-distance orders) | 2h |
-| 41 | Shift allocation / schedule booking system | 6h |
-| 42 | Score-based scheduling (performance affects shift access) | 4h |
-| 43 | Siri Shortcuts integration (call customer, go online, earnings) | 4h |
-| 44 | Safety: Aura on-demand emergency response platform integration | 6h |
-| 45 | Safety: Predictive risk prevention (telematics data, motion-based risk signals) | 6h |
-| 46 | Safety: PPE distribution partnerships / helmet initiatives / safety kits | 4h |
-| 47 | Streamlined single drop-off flow | 4h |
-| 48 | Drop-off problem resolution screen | 4h |
-| 49 | Proof of delivery via QR code (alternative to photo) | 4h |
-| 50 | Rider compliance page (penalties, fines, demerit points) | 4h |
-| 51 | Traffic rule refreshers + e-bike compliance guidelines in-app | 4h |
-| 52 | New joiner fee / referral fee information pages | 2h |
-| 53 | Training completion tracking | 4h |
-| 54 | Rider insurance enrolment flow | 4h |
-| 55 | Tax information submission | 4h |
-|    | **Subtotal** | **374h** |
-
----
-
-## Milestone 7: Admin & Subscriptions
+## Milestone 4: Admin & Advanced Features
 
 ### Admin & Operations Console
 
@@ -417,10 +423,6 @@
 | 14 | Uber One credits earned/expiring view (balance, expiry tracker) | 4h |
 |    | **Subtotal** | **104h** |
 
----
-
-## Milestone 8: Advanced Features
-
 ### AI & Personalisation Engine
 
 | # | Task | Est. Time |
@@ -460,14 +462,11 @@
 
 | Milestone | Advance (50%) | Completion (50%) | Total |
 |-----------|---------------|------------------|-------|
-| 1. Auth & Account Foundation | $8,100 | $8,100 | $16,200 |
-| 2. Core Customer Experience | $11,700 | $11,700 | $23,400 |
-| 3. Cart, Checkout & Payments | $17,700 | $17,700 | $35,400 |
-| 4. Order Management & Tracking | $9,450 | $9,450 | $18,900 |
-| 5. Merchant Tools | $16,800 | $16,800 | $33,600 |
-| 6. Rider App | $14,025 | $14,025 | $28,050 |
-| 7. Admin & Subscriptions | $14,625 | $14,625 | $29,250 |
-| 8. Advanced Features | $13,050 | $13,050 | $26,100 |
-| **Total** | **$105,450** | **$105,450** | **$210,900** |
+| 0. Project Setup | $2,250 | $2,250 | $4,500 |
+| 1. Merchant & Rider | $30,825 | $30,825 | $61,650 |
+| 2. Frontend Customer Experience | $19,800 | $19,800 | $39,600 |
+| 3. Core Transaction Flow | $27,150 | $27,150 | $54,300 |
+| 4. Admin & Advanced Features | $27,675 | $27,675 | $55,350 |
+| **Total** | **$107,700** | **$107,700** | **$215,400** |
 
-## Grand Total Time: 2,812 hours
+## Grand Total Time: 2,872 hours
