@@ -14,7 +14,7 @@
 - **Phase 3** is the first major post-core feature set and includes the highlighted WhatsApp AI assistant, voice-recorded ordering, and scan order capabilities.
 - **Phase 4** handles dispatch and live tracking using web and WhatsApp only — no native rider app for the pilot.
 - **Phase 5** adds growth, personalisation, and advanced AI.
-- **Phase 6** adds scale features such as marketplace connectors, POS integrations, and ads.
+- **Phase 6** adds scale features such as POS integrations, kitchen display system, and AI-driven tools.
 
 ---
 
@@ -431,11 +431,11 @@
 
 ## Phase 6 — Scale & Ecosystem
 
-**Goal:** integrate external channels, backend systems, and marketing automation.
+**Goal:** integrate backend systems, kitchen workflow tools, and AI-driven automation.
 **Duration estimate:** 6–8 weeks.
 **Depends on:** Phases 1–5.
 
-### 6.2 POS Integrations
+### 6.1 POS Integrations
 
 | Feature / Sub-task    | Manual hrs | AI hrs |   Manual $ |       AI $ |
 | --------------------- | ---------- | -----: | ---------: | ---------: |
@@ -445,7 +445,7 @@
 | Order push to POS     | 32         |      6 |       $960 |       $180 |
 | **Subtotal**          | **192**    | **38** | **$5,760** | **$1,140** |
 
-### 6.3 Kitchen Display System
+### 6.2 Kitchen Display System
 
 | Feature / Sub-task       | Manual hrs | AI hrs |   Manual $ |     AI $ |
 | ------------------------ | ---------- | -----: | ---------: | -------: |
@@ -454,7 +454,7 @@
 | Ticket prioritisation    | 24         |      5 |       $720 |     $150 |
 | **Subtotal**             | **120**    | **24** | **$3,600** | **$720** |
 
-### 6.4 AI Demand Forecasting
+### 6.3 AI Demand Forecasting
 
 | Feature / Sub-task         | Manual hrs | AI hrs |   Manual $ |     AI $ |
 | -------------------------- | ---------- | -----: | ---------: | -------: |
@@ -463,23 +463,23 @@
 | Prep recommendations       | 24         |      5 |       $720 |     $150 |
 | **Subtotal**               | **96**     | **19** | **$2,880** | **$570** |
 
-### 6.5 AI Dynamic Pricing
+### 6.4 AI Dynamic Pricing
 
 | Feature / Sub-task                   | Manual hrs | AI hrs |   Manual $ |     AI $ |
 | ------------------------------------ | ---------- | -----: | ---------: | -------: |
 | Demand-based delivery fee adjustment | 40         |      8 |     $1,200 |     $240 |
 | Surge / peak pricing rules           | 32         |      6 |       $960 |     $180 |
-| **Subtotal**                         | **96**     | **19** | **$2,880** | **$570** |
+| **Subtotal**                         | **72**     | **14** | **$2,160** | **$420** |
 
-### 6.6 AI-Based Social Media Ads
+### 6.5 AI-Based Social Media Ads
 
 | Feature / Sub-task        | Manual hrs | AI hrs |   Manual $ |       AI $ |
 | ------------------------- | ---------- | -----: | ---------: | ---------: |
 | Ad creative generation    | 40         |      8 |     $1,200 |       $240 |
 | Caption / copy generation | 24         |      5 |       $720 |       $150 |
-| **Subtotal**              | **184**    | **37** | **$5,520** | **$1,110** |
+| **Subtotal**              | **64**     | **13** | **$1,920** | **$390** |
 
-**Phase 6 Total:** 1,096 manual hrs → **$32,880** | 218 AI hrs → **$6,540**
+**Phase 6 Total:** 544 manual hrs → **$16,320** | 108 AI hrs → **$3,240**
 
 ---
 
@@ -492,8 +492,8 @@
 | Phase 3 — WhatsApp AI, Voice & Scan                 |        864 |       173 |      $25,920 |      $5,190 |            5–6 |
 | Phase 4 — Dispatch & Live Tracking (Web + WhatsApp) |        576 |       114 |      $17,280 |      $3,420 |            4–5 |
 | Phase 5 — Growth & AI Personalisation               |        640 |       127 |      $19,200 |      $3,810 |            5–6 |
-| Phase 6 — Scale & Ecosystem                         |      1,096 |       218 |      $32,880 |      $6,540 |            6–8 |
-| **TOTAL**                                           |  **5,320** | **1,060** | **$159,600** | **$31,800** |      **32–40** |
+| Phase 6 — Scale & Ecosystem                         |        544 |       108 |      $16,320 |      $3,240 |            6–8 |
+| **TOTAL**                                           |  **4,868** |   **950** | **$146,040** | **$28,500** |      **32–40** |
 
 ### Pilot launch scope (Phases 1–3)
 
