@@ -435,16 +435,6 @@
 **Duration estimate:** 6–8 weeks.
 **Depends on:** Phases 1–5.
 
-### 6.1 Marketplace Connectors
-
-| Feature / Sub-task        | Manual hrs | AI hrs |   Manual $ |       AI $ |
-| ------------------------- | ---------- | -----: | ---------: | ---------: |
-| Uber Eats order ingestion | 80         |     16 |     $2,400 |       $480 |
-| Just Eat connector        | 80         |     16 |     $2,400 |       $480 |
-| Deliveroo connector       | 80         |     16 |     $2,400 |       $480 |
-| Unified queue view        | 40         |      8 |     $1,200 |       $240 |
-| **Subtotal**              | **280**    | **56** | **$8,400** | **$1,680** |
-
 ### 6.2 POS Integrations
 
 | Feature / Sub-task    | Manual hrs | AI hrs |   Manual $ |       AI $ |
@@ -479,28 +469,15 @@
 | ------------------------------------ | ---------- | -----: | ---------: | -------: |
 | Demand-based delivery fee adjustment | 40         |      8 |     $1,200 |     $240 |
 | Surge / peak pricing rules           | 32         |      6 |       $960 |     $180 |
-| Caps and merchant controls           | 24         |      5 |       $720 |     $150 |
 | **Subtotal**                         | **96**     | **19** | **$2,880** | **$570** |
 
 ### 6.6 AI-Based Social Media Ads
 
-| Feature / Sub-task                     | Manual hrs | AI hrs |   Manual $ |       AI $ |
-| -------------------------------------- | ---------- | -----: | ---------: | ---------: |
-| Ad creative generation                 | 40         |      8 |     $1,200 |       $240 |
-| Caption / copy generation              | 24         |      5 |       $720 |       $150 |
-| Campaign tracking dashboard            | 40         |      8 |     $1,200 |       $240 |
-| Meta / TikTok / Google API integration | 80         |     16 |     $2,400 |       $480 |
-| **Subtotal**                           | **184**    | **37** | **$5,520** | **$1,110** |
-
-### 6.7 Advanced Analytics & BI
-
-| Feature / Sub-task      | Manual hrs | AI hrs |   Manual $ |     AI $ |
-| ----------------------- | ---------- | -----: | ---------: | -------: |
-| Cohort analysis         | 32         |      6 |       $960 |     $180 |
-| Customer lifetime value | 40         |      8 |     $1,200 |     $240 |
-| Merchant benchmarking   | 32         |      6 |       $960 |     $180 |
-| Scheduled reports       | 24         |      5 |       $720 |     $150 |
-| **Subtotal**            | **128**    | **25** | **$3,840** | **$750** |
+| Feature / Sub-task        | Manual hrs | AI hrs |   Manual $ |       AI $ |
+| ------------------------- | ---------- | -----: | ---------: | ---------: |
+| Ad creative generation    | 40         |      8 |     $1,200 |       $240 |
+| Caption / copy generation | 24         |      5 |       $720 |       $150 |
+| **Subtotal**              | **184**    | **37** | **$5,520** | **$1,110** |
 
 **Phase 6 Total:** 1,096 manual hrs → **$32,880** | 218 AI hrs → **$6,540**
 
