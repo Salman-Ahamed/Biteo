@@ -8,18 +8,6 @@ You test **only with a web browser**. You do **not** need Postman, curl, or any
 coding. You do the stations **in order, one at a time** — each station builds on
 the one before it.
 
-Related documents:
-
-- [`auth-browser-testing.md`](./auth-browser-testing.md) — the developer / automated
-  runbook (environment contract + Playwright). Write code, not manual QA.
-- [`auth-smoke-testing.md`](./auth-smoke-testing.md) — signed-envelope test harness.
-- [`local-development.md`](./local-development.md) — local setup and env values.
-- [`../architecture/auth-architecture.md`](../architecture/auth-architecture.md) —
-  the design and the rules behind every expectation here.
-
-> The developer runbook (`auth-browser-testing.md`) is the **environment +
-> automation**; **this** document is the **human, browser-only QA pass**.
-
 ---
 
 ## Part 0 — Read this first (5 rules)
