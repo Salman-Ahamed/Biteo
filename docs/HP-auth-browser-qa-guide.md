@@ -883,7 +883,8 @@ base/registration is off — report **BLOCKED**, not a UI bug.
    confirm.
 6. **Only sign-in method (K6).** For an account that has **only** Google (no
    password), click **Unlink**.
-7. **Gate (K7).** If OAuth is disabled, open `/login`.
+7. **Gate (K7).** If OAuth is disabled, open `/login` (skip K7 on STAGING — it is
+   enabled there).
 8. **Hygiene (K8).** During K1–K3, watch Application → Cookies and the Network tab.
 
 ✅ Pass looks like
@@ -902,12 +903,14 @@ base/registration is off — report **BLOCKED**, not a UI bug.
   the account stays linked and you stay signed in.
 - K7: the Google button is hidden/disabled, and visiting
   `/api/auth/v2/oauth/google/start` does **not** start a flow (it redirects back
-  with an "unavailable" message, never a raw error page).
-- K8: a short-lived `hablu-oauth-state` cookie appears during the flow and is
-  **gone after** the callback; it is `HttpOnly`. No `id_token`, no Google token,
-  and no backend token ever appear in storage, `document.cookie`, or a response
-  body. Cancelling on Google's screen returns you to `/login` with a friendly
-  message, not a crash.
+  with an "unavailable" message, never a raw error page). **N/A on STAGING**
+  (OAuth is enabled there).
+- K8: a short-lived `hablu-oauth-state` cookie (LOCAL) /
+  `__Host-hablu-oauth-state` (STAGING) appears during the flow and is **gone
+  after** the callback; it is `HttpOnly`. No `id_token`, no Google token, and no
+  backend token ever appear in storage, `document.cookie`, or a response body.
+  Cancelling on Google's screen returns you to `/login` with a friendly message,
+  not a crash.
 
 📸 Screenshot this: signed in after Google; the "Linked as" row; the different-email
 toast.
@@ -945,6 +948,9 @@ Tips:
   repeats for **your own** account/action — the ingress bucket is shared (1A.5).
 
 ### Results tracker (fill as you go)
+
+Run: Environment **______** · Host **______** · Date/time **______** · Browser
+**______** · Deployed revision (STAGING) **______**
 
 | Station | Test IDs | Result | Evidence / Notes |
 |---|---|---|---|
