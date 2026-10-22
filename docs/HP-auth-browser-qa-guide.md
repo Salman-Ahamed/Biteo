@@ -8,15 +8,40 @@ You test **only with a web browser**. You do **not** need Postman, curl, or any
 coding. You do the stations **in order, one at a time** — each station builds on
 the one before it.
 
+The same track runs against **two environments**:
+
+| Name | Address | Setup part |
+|---|---|---|
+| **LOCAL** | `http://localhost:11000` | Part 1 |
+| **STAGING** | `https://dev.hablu-programmer.com` | Part 1A (replaces §1.2) |
+
+Everything environment-specific lives in **Part 1A** and in the per-Station
+`🖥️ Staging:` lines. **A Station with no `🖥️ Staging:` line behaves the same on
+both environments.** Production (`hablu-programmer.com`) is **out of scope**.
+
+Related documents:
+
+- [`auth-browser-testing.md`](./auth-browser-testing.md) — the developer / automated
+  runbook (environment contract + Playwright). Write code, not manual QA.
+- [`auth-smoke-testing.md`](./auth-smoke-testing.md) — signed-envelope test harness.
+- [`local-development.md`](./local-development.md) — local setup and env values.
+- [`../architecture/auth-architecture.md`](../architecture/auth-architecture.md) —
+  the design and the rules behind every expectation here.
+
+> The developer runbook (`auth-browser-testing.md`) is the **environment +
+> automation**; **this** document is the **human, browser-only QA pass**.
+
 ---
 
 ## Part 0 — Read this first (5 rules)
 
-1. **Only use the frontend address:** `http://localhost:11000` (never the backend
-   address).
-2. **If you open a backend link** like `http://localhost:13000/api/v2/auth/me` you
-   will see `401`. **That is correct**, not a bug. The backend only answers the
-   frontend, never the browser directly.
+1. **Only use the frontend address** for your environment — `http://localhost:11000`
+   (LOCAL) or `https://dev.hablu-programmer.com` (STAGING). Never a backend
+   address.
+2. **If you open a backend link** like `http://localhost:13000/api/v2/auth/me`
+   (LOCAL) you will see `401`. **That is correct**, not a bug. On STAGING the
+   backend has **no public address at all**, so a browser call is not even
+   possible. The backend only answers the frontend, never the browser directly.
 3. **HTTP `200` is not "success".** Success = what you **see** (a message, a
    redirect, the list contents). A request can return `200` and still fail.
 4. **Go one Station at a time.** Finish a Station, note PASS/FAIL, then move on. If
@@ -31,7 +56,8 @@ the one before it.
 - **BFF** — the frontend's own server that talks to the backend. You never see it;
   it keeps every backend token away from the browser.
 - **Session** — "you are logged in". It is stored in a cookie named
-  `hablu-session-dev` (locally), which JavaScript **cannot read**.
+  `hablu-session-dev` (LOCAL) or `__Host-hablu-session` (STAGING), which JavaScript
+  **cannot read**.
 - **Station** — one small chunk of the test track, built around one button/API.
 
 ### Symbols you will see in every Station
@@ -45,6 +71,7 @@ the one before it.
 | ✅ | What a **pass** looks like |
 | ⚠️ | An extra **edge / failure** case to also try |
 | 📸 | What to screenshot as evidence |
+| 🖥️ | **Staging-only** difference from the local run (absent = identical) |
 | ☐ | Result boxes: **PASS / FAIL / BLOCKED** |
 
 ### What is **not** in scope (do **not** report as bugs)
@@ -55,12 +82,16 @@ the one before it.
   developer enables it (`AUTH_OAUTH_ENABLED=true` on the backend, plus the Google
   client + redirect URI + `V2_OAUTH_STATE_SECRET` on the frontend). If the Google
   button is missing or greyed out, that is the **feature gate**, not a bug. Confirm
-  with the developer before **Station 17**.
+  with the developer before **Station 17**. On STAGING it is already enabled
+  (see 1A.6).
 - **Legacy dashboard / business data** — the bridge that feeds old dashboard/business
   APIs is not built yet. Only report **auth** behaviour.
-- **Real client-IP rate limiting** — the global IP backstops stay off
-  (`AUTH_RATE_LIMIT_ENABLED=false`). Per-endpoint limits still apply.
-- **Deployed / production behaviour** — this pass is for the **local** setup only.
+- **Production rate limiting** — LOCAL keeps the guard-level IP backstops **off**
+  (`AUTH_RATE_LIMIT_ENABLED=false`), so only the per-endpoint limits apply.
+  **STAGING has them on** (`AUTH_RATE_LIMIT_ENABLED=true`, mandatory in production
+  mode), including one **shared** ingress bucket for every tester (see 1A.5).
+- **Production behaviour** — this pass covers **LOCAL and STAGING** only. The real
+  production site and production API are out of scope.
 
 ### The buttons you are testing (quick map)
 
@@ -87,16 +118,23 @@ the one before it.
 
 ## Part 1 — Setup (do this once, before Station 1)
 
+> **Running on STAGING?** Part 1 applies **except §1.2** — the staging backend has
+> no public health address, so use **Part 1A** for that, then continue with
+> §1.3–§1.6 here.
+
 ### 1.1 Ask the developer to confirm
 
 Before you start, the developer must confirm:
 
-- Backend and frontend are running (see 1.2).
+- Backend and frontend are running (see 1.2; STAGING: see 1A.2).
 - Email sending works (you will need real codes).
 - For **Station 17 (Google)**: `AUTH_OAUTH_ENABLED=true`, the Google client +
-  redirect URI are set, and `V2_OAUTH_STATE_SECRET` is set.
+  redirect URI are set, and `V2_OAUTH_STATE_SECRET` is set (on STAGING this is
+  already done — see 1A.6).
+- **STAGING only:** the basic-auth user/password for the host, and the deployed
+  revision you are testing (so a FAIL can be tied to a build).
 
-### 1.2 Check both apps are alive
+### 1.2 Check both apps are alive   (LOCAL only)
 
 | App | Address | What you should see |
 |---|---|---|
@@ -107,6 +145,11 @@ Before you start, the developer must confirm:
   env"**, the frontend is not fully configured. Tell the developer — **not** a
   product bug.
 - If the backend health link does not show `up` for both, tell the developer.
+
+> **STAGING has no reachable backend address.** The v2 backend publishes no route
+> and rejects anything carrying a browser `Origin`/`Sec-Fetch-Site` with `403`, so
+> `/health/ready` does **not** exist at `dev.hablu-programmer.com` — a `404`/`403`
+> there is expected. Use **1A.2** instead.
 
 ### 1.3 Set up your browser
 
@@ -144,13 +187,116 @@ Use a **Chromium-based browser** (Chrome / Edge / Brave). Then:
   **10** active sessions. Login needs a **verified** email.
 - **No account-existence leak**: register / resend / forgot-password always give the
   same neutral answer, whether or not the email exists.
-- **Cookie**: `hablu-session-dev` locally (`__Host-hablu-session` in production);
-  `HttpOnly`, `SameSite=Lax`, `Path=/`, `Secure` only in production. The browser
-  **never** holds a backend token.
+- **Cookie**: `hablu-session-dev` on LOCAL; `__Host-hablu-session` on STAGING
+  (production-style). Both are `HttpOnly`, `SameSite=Lax`, `Path=/`; `Secure` is
+  present **only where the site is HTTPS** (i.e. always on STAGING, never on
+  `http://localhost`). The browser **never** holds a backend token.
+- **Not testable in a browser** (covered by automated tests — do **not** file these
+  as FAIL): the idle **7-day** / absolute **30-day** expiry, and the **10-session**
+  cap (you *can* sign in 10 times and check the 11th, but that is an optional extra,
+  not a required Station).
 
 ### 1.6 You are ready when…
 
-- Both apps are up, DevTools is set, and you have Account A's email ready.
+- Both apps are up (LOCAL) or the staging host opens after basic-auth (STAGING),
+  DevTools is set, and you have Account A's email ready.
+
+---
+
+## Part 1A — STAGING mode (`https://dev.hablu-programmer.com`)
+
+Same Stations, but on the deployed staging stack: real HTTPS, production-style
+cookie, **live** rate limits, and real Google OAuth. Do this part **instead of
+§1.2**, then continue with §1.3–§1.6 of Part 1.
+
+### 1A.1 What you need before starting
+
+- The **staging basic-auth** username + password (Traefik gate in front of the
+  whole host). Without it every URL answers `401`.
+- A **brand-new** email you can open (Account A), plus an optional Account B.
+- **Two Google accounts** for Station 17 (one email that has no staging account,
+  one that matches an existing staging account).
+- Nothing installed; no VPN; use a normal Chromium-based browser.
+
+### 1A.2 Is staging alive?
+
+| Check | How | Pass looks like |
+|---|---|---|
+| Host + TLS + access gate | open `https://dev.hablu-programmer.com/login` | the browser asks for the basic-auth user/password, then `/login` renders over HTTPS |
+| Frontend build | the `/login` page itself | no "Missing required server-only v2 auth env" error |
+| Backend | **not reachable from a browser** — no public route, and browser-origin calls get `403` | a `404`/`403` on `/health/ready` is **expected**; the developer checks containers on the VPS |
+
+- `401` + `WWW-Authenticate: Basic realm="traefik"` = the **access gate**, not the
+  app login. Re-enter the credentials (a new incognito window asks again).
+- If the basic-auth credentials are rejected, file **BLOCKED (access)** — not a
+  product bug.
+
+### 1A.3 URLs and the cookie profile
+
+- Use **`https://dev.hablu-programmer.com`** everywhere this guide says
+  `http://localhost:11000`; never plain `http` (the `__Host-` cookie requires
+  HTTPS + `Secure`).
+- Session cookie name is **`__Host-hablu-session`** (not `hablu-session-dev`):
+  `HttpOnly`, `Secure`, `SameSite=Lax`, `Path=/`, **host-only** (no `Domain`).
+- `AUTH_V2_BFF_ENABLED=true` on staging, so the v2 pages/cookies above are the ones
+  you should see. The legacy NextAuth session is the rollback path and is **not**
+  this pass.
+
+### 1A.4 Email codes
+
+- Staging sends real email through live SMTP via the outbox worker (≈30 s
+  interval), so allow **up to a minute** before calling it lost.
+- Registrations create **real staging accounts** — only use inboxes you own.
+- The normal caps still apply (§1.5), including **3 sends per email per hour**;
+  don't burn them on the same address.
+
+### 1A.5 Rate limits are ON — and one bucket is shared
+
+- `AUTH_RATE_LIMIT_ENABLED=true` on staging (it is **mandatory** in production
+  mode), so the guard floor is live: ingress 600/min, aggregate 300/min per
+  verified client, per-service backstop 3000/min, **plus** the per-endpoint
+  budgets in §1.5.
+- The proxy trust list is intentionally empty, so the **ingress** limiter keys on
+  the BFF container IP: **all testers share that single 600/min bucket**. A `429`
+  you did not provoke is therefore *not* automatically a bug — note the time,
+  wait for `Retry-After`, and retry.
+- Per-account and per-IP endpoint budgets (`login-ip` 30/min, `register-ip`
+  15/min, `resend-ip` 10/min, …) still behave per client.
+- Observed baseline on staging: 10 failed logins accepted, the 11th answered
+  `429` with `Retry-After` and stayed blocked for the window.
+
+### 1A.6 Google OAuth on staging
+
+- OAuth is **enabled** (`AUTH_OAUTH_ENABLED=true`); the callback
+  `https://dev.hablu-programmer.com/api/auth/v2/oauth/google/callback` and the
+  authorized JavaScript origin are registered for this host.
+- The redirect host is **pinned** to `V2_OAUTH_REDIRECT_BASE=https://dev.hablu-programmer.com`.
+  A mismatch fails closed (dead-looking button, or a bounce to `/login` with
+  `?error=`), so report that **BLOCKED**, not a UI bug.
+- For K1/K2 be truly signed out of the app; if Chrome auto-selects a Google
+  account, use "Use another account" so you control which one is tested.
+- The legacy `…/api/auth/callback/google` URI is also registered only for the
+  rollback path (`AUTH_V2_BFF_ENABLED=false`) — do **not** test that path here.
+
+### 1A.7 What is *not* different
+
+Everything else: the Stations, PASS criteria, policies, messages, route
+protection, DevTools checks (apart from the cookie name/`Secure` and the
+rate-limit posture above), and mobile/keyboard.
+
+### 1A.8 Staging cautions
+
+- The v2 auth database is staging-only, **but** the staging frontend still reads
+  the **production legacy** LMS API. Keep to **auth**: do not run payment,
+  enrollment or profile-business flows, and do not mutate production data.
+- Screenshots: hide the basic-auth credentials, real emails, codes, cookie values
+  and tokens.
+- Sign out (or revoke) the sessions you created when you finish.
+
+### 1A.9 You are ready when…
+
+- The staging host opens after basic auth, DevTools is set, Account A's email is
+  ready, and — for Station 17 — two Google accounts are ready.
 
 ---
 
@@ -161,6 +307,7 @@ How each Station is written:
 ```text
 🗣️ What it does        (plain words)          ── the button/page
 🔌 API behind it       (for reference)
+🖥️ Staging delta       (only when it differs; absent = same as local)
 📋 Before you start    (which earlier Station it needs)
 ▶️ Steps               (numbered, exact)
 ✅ Pass looks like      (what you should see)
@@ -177,12 +324,19 @@ How each Station is written:
 
 🔌 Frontend pages only (no API call).
 
+🖥️ Staging: use `https://dev.hablu-programmer.com/login` (etc.). The host asks
+for the basic-auth user/password **before** the page appears — that is the access
+gate, not the app login.
+
 📋 Before you start: fresh **incognito window** (so you are logged out).
 
 ▶️ Steps
-1. Open `http://localhost:11000/login`.
-2. Open `http://localhost:11000/register`.
-3. Open `http://localhost:11000/forgot-password`.
+1. Open `<frontend>/login`.
+2. Open `<frontend>/register`.
+3. Open `<frontend>/forgot-password`.
+
+`<frontend>` = `http://localhost:11000` (LOCAL) or
+`https://dev.hablu-programmer.com` (STAGING).
 
 ✅ Pass looks like
 - All three pages open.
@@ -229,6 +383,10 @@ is set later, after email verification).
 backend**, then submit. You should see an **error**, **no** success toast, **no**
 redirect, your typed text kept, and it works again after the backend restarts.
 
+🖥️ Staging: A6 needs a deliberate **VPS action** (stop/restart the staging
+container), so it is **developer-assisted**. If that is not scheduled, mark A6
+**N/A** and do not fail the Station for it.
+
 📸 Screenshot this: the success toast + the `/verify-user` page; and the duplicate
 (the neutral message).
 
@@ -261,6 +419,10 @@ redirect, your typed text kept, and it works again after the backend restarts.
 
 ⚠️ Also try: send codes rapidly to trigger the **3-per-hour** cap; you should see a
 clear English message and recovery after the window.
+
+🖥️ Staging: the 3-per-hour cap is enforced for real. A `429` that is not tied to
+your action can come from the **shared** ingress bucket (1A.5) — record the time
+and the exact message before calling it a bug.
 
 📸 Screenshot this: the `Resend (m:ss)` countdown, and the reload keeping the time.
 
@@ -331,6 +493,10 @@ clear English message and recovery after the window.
 ⚠️ Also try (security): a crafted external `callbackUrl` (e.g. `https://evil.example`)
 must **not** send you off-site.
 
+🖥️ Staging: wrong-password attempts are budgeted (`login-ip` 30/min per client IP
+and per account). If testers share one office/NAT IP, you can legitimately reach
+`429`; wait for `Retry-After` before reporting anything.
+
 📸 Screenshot this: the toast + `/` after login; the callback landing on `/profile`.
 
 ☐ Result: PASS / FAIL / BLOCKED — Notes: ______
@@ -346,7 +512,7 @@ must **not** send you off-site.
 📋 Before you start: Station 5 done (signed in).
 
 ▶️ Steps
-1. Visit `http://localhost:11000/` (home).
+1. Visit `<frontend>/` (home).
 2. Visit `/profile`.
 
 ✅ Pass looks like
@@ -381,6 +547,10 @@ must **not** send you off-site.
 
 ⚠️ Also try: open two tabs and load `/profile` in both at the same moment — both
 should stay signed in (no "flicker to logged-out").
+
+🖥️ Staging: the 15-minute TTL is fixed; shortening it means an env change **and**
+a redeploy. Either wait the full 15 minutes, or mark B7 **N/A** — skipping it is
+not a FAIL.
 
 📸 Screenshot this: `/profile` still showing your data after the wait.
 
@@ -493,6 +663,11 @@ should stay signed in (no "flicker to logged-out").
   signed out); old password fails, new works.
 - Step 5: you are signed out and taken to `/forgot-password`.
 
+⚠️ Also try (passwordless account, optional): sign in with **Google only** (no
+password ever set — e.g. the account from Station 17 K1) and open Change Password.
+It must be **refused** (there is no current password to verify); the account uses
+the reset flow instead.
+
 📸 Screenshot this: the drawer; the success toast + `/login`; the other-session
 signed out.
 
@@ -516,13 +691,18 @@ signed out.
 4. **(F4, optional)** Confirm you only ever see **your own** sessions.
 
 ✅ Pass looks like
-- Step 1: a **Device Activity** table: **No. · Device · Browser · IP · Last Active ·
-  (action)**; your current session is listed.
+- Step 1: a **Device Activity** table: **No. · Device · Browser · IP · Location ·
+  Last Active · (action)**; your current session is listed. `Location` may read
+  `-` when the GeoIP lookup has no answer.
 - Step 2: the action cell for your own row reads **"This device"** (no sign-out
   button).
 - Step 3: **both** sessions appear; only the **other** one has a **Sign out**
   button.
 - Step 4: no other user's rows ever appear.
+
+🖥️ Staging: `IP` is the BFF-attested client address; `Location` is a best-effort
+GeoIP label of the browser-reported IP, so a coarse or `-` value is expected. A
+second browser/profile must pass the basic-auth gate again.
 
 📸 Screenshot this: the table with your session marked "This device".
 
@@ -582,6 +762,12 @@ signed out.
   **not** be treated as a course.
 - Step 5: the auth pages still **render** (you are not locked out).
 
+🖥️ Staging: H2's second variant (clear the session **server-side**, keep the old
+cookie) is **developer-assisted** (VPS/database). The normal sign-out variant is
+enough for the browser pass; if the server-side clear is not scheduled, mark H2
+**N/A**, not FAIL. When a private page redirects to `/login`, the basic-auth gate
+may ask for credentials again on a fresh profile — that is not a second bug.
+
 📸 Screenshot this: a private page → `/login`; public pages opening.
 
 ☐ Result: PASS / FAIL / BLOCKED — Notes: ______
@@ -603,12 +789,14 @@ signed out.
    responses.
 4. **Double-submit (I4):** double-click submit (or press Enter twice) on register,
    login, verify, and resend.
-5. **Rate-limit feedback (I5):** trigger a limit (e.g. one extra register in the
-   window).
+5. **Rate-limit feedback (I5):** trigger a limit — e.g. repeat failed logins for
+   your own account, or one extra register/resend inside the window.
 
 ✅ Pass looks like
-- Step 1: the session cookie is `HttpOnly`, `SameSite=Lax`, `Path=/`, and `Secure`
-  **only** in production.
+- Step 1: LOCAL — the cookie is `hablu-session-dev` with `HttpOnly`,
+  `SameSite=Lax`, `Path=/` and **no** `Secure` (plain HTTP); STAGING — the cookie
+  is `__Host-hablu-session` with `Secure` **present**, `HttpOnly`, `SameSite=Lax`,
+  `Path=/`, and no `Domain`.
 - Step 2: **no** backend access/refresh token and **no** session handle; the
   `HttpOnly` cookie is unreadable from JS.
 - Step 3: no backend token or session handle reaches the browser. (Your typed
@@ -616,6 +804,12 @@ signed out.
 - Step 4: no duplicate or out-of-order action (verify in Network — a disabled
   button alone is not proof).
 - Step 5: a clear English message, no auto-retry loop, recovery after the window.
+
+🖥️ Staging: the guard floor is **on** (1A.5), so `429` + `Retry-After` are normal
+here. Check the *shape* (clear English message, no retry loop, recovery), and
+prefer the **per-account** trigger (repeat failed logins for your own account)
+over hammering register/resend, so you do not slow down other testers through the
+shared ingress bucket.
 
 📸 Screenshot this: the cookie showing `HttpOnly`; storage empty of tokens.
 
@@ -661,6 +855,13 @@ signed out.
   missing or greyed at `/login`, **stop** — that is the feature gate, not a bug.
 - You need **two Google accounts**: one whose email `X` is **not** registered, and
   one whose email matches an existing account `Y`.
+
+🖥️ Staging: OAuth is already **enabled** for this host with a registered callback
+(1A.6), so a greyed/missing Google button **is** worth reporting. K1/K2 land on
+the staging default page (`https://dev.hablu-programmer.com/`). Sign out of Google
+between K1 and K2 (or use "Use another account") so the browser does not silently
+reuse the previous identity. A bounce to `/login?error=…` means the redirect
+base/registration is off — report **BLOCKED**, not a UI bug.
 
 > **Auto-link is on purpose (owner decision 2026-10-16).** A Google-verified email
 > that already has an account **auto-links (or creates the account) and signs in** —
@@ -720,6 +921,7 @@ toast.
 For every **FAIL** or **BLOCKED**, copy this and fill it in:
 
 ```text
+Environment:         LOCAL | STAGING  (host: localhost:11000 | dev.hablu-programmer.com)
 Test ID (Station):   e.g. Station 3 / A12
 What I did:          the exact steps
 Expected:            from this guide
@@ -730,10 +932,17 @@ Evidence:            screenshot(s) + the Network row (status) + the URL + the ti
 
 Tips:
 
+- Record the run header once per pass: environment, host, date/time (with timezone),
+  browser + version, and — on STAGING — the **deployed revision** (the developer can
+  give you the commit/image id), plus the basic-auth user you used (never the
+  password).
 - Screenshot both the **toast** and the **page** after the action, **plus** the
   Network row (status code).
 - If the developer asks, include the backend **request/correlation id**.
-- **Hide** passwords, codes, cookie values, and tokens before sharing.
+- **Hide** passwords, codes, basic-auth credentials, cookie values, and tokens
+  before sharing.
+- On STAGING, an unexpected `429` is only a FAIL if it survives `Retry-After` and
+  repeats for **your own** account/action — the ingress bucket is shared (1A.5).
 
 ### Results tracker (fill as you go)
 
@@ -764,20 +973,31 @@ Tips:
 | What you see | Likely cause | What to do |
 |---|---|---|
 | `/login` server error "Missing required server-only v2 auth env" | frontend env incomplete | ask the developer; not a product bug |
+| `401` + `WWW-Authenticate: Basic realm="traefik"` (STAGING) | staging host access gate | enter the staging basic-auth user/password; this is not the app login |
+| `/health/ready` gives `404`/`403` on STAGING | the v2 backend has no public route (by design) | expected; the developer checks containers on the VPS |
 | Direct backend link returns `401` | backend rejects browser callers (by design) | use the frontend address only |
-| No code email arrives | email/SMTP or outbox problem | check spam, then file **BLOCKED** |
+| No code email arrives | email/SMTP or outbox problem | check spam (allow ~1 min on STAGING), then file **BLOCKED** |
 | Resend button is disabled | 300 s cooldown (or a send in progress) | wait for `Resend (0:00)` |
 | Cooldown restarts at `5:00` on reload | **bug** | report it (Station 3, A13) |
 | A private page keeps you in after sign-out | **bug** | report it (Station 14, H2) |
 | Change password logs you out | expected | all sessions are revoked by design |
-| Google button missing/greyed | feature gate off, or env not ready | confirm with the developer (Station 17) |
+| Google button missing/greyed | LOCAL: feature gate off or env not ready. STAGING: it should be on | confirm with the developer (Station 17 / 1A.6) |
 | Google shows "redirect_uri_mismatch" | the v2 callback URI is not registered in Google Cloud | developer adds the frontend callback URI |
+| Unexpected `429` on STAGING | shared ingress bucket, or a per-account/per-IP budget | note the time + action, wait `Retry-After`, retry; only report if it repeats for your own action |
+| `/login?error=…` after Google on STAGING | pinned redirect base (`V2_OAUTH_REDIRECT_BASE`) or callback registration mismatch | report **BLOCKED** with the URL; not a UI bug |
 
 Known limits (not bugs for this pass):
 
 - **Email codes need working email** — no SMTP means no code (environment blocker).
-- **Global per-IP backstops are off** (`AUTH_RATE_LIMIT_ENABLED=false`); only
-  per-endpoint limits apply.
+- **LOCAL**: guard-level IP backstops are off (`AUTH_RATE_LIMIT_ENABLED=false`);
+  only the per-endpoint limits apply.
+- **STAGING**: the guard floor is **on** (`AUTH_RATE_LIMIT_ENABLED=true`), and the
+  **ingress** bucket is shared across all testers because the proxy trust list is
+  empty (`TRUST_PROXY_CIDRS=`). `429`s you did not provoke are expected.
+- **STAGING** still reads the **production legacy** LMS API for business data —
+  auth only, no payment/enrollment/profile-business flows.
+- **STAGING** sits behind Traefik basic auth; screenshots must hide those
+  credentials.
 - **GitHub sign-in is out of scope**, and **Google sign-in runs only when enabled**.
 - After logout a page may briefly still *look* signed in — the rule is that the
   **next request** is denied.
@@ -805,4 +1025,7 @@ Known limits (not bugs for this pass):
 | `/profile` → Linked Accounts list | `listMyOAuthIdentitiesV2` | `GET /auth/oauth-identities` | access token |
 | `/profile` → "Unlink" | `unlinkOAuthAction` | `POST /auth/oauth-unlink` | access token |
 
-> All backend paths are relative to `http://localhost:13000/api/v2`.
+> All backend paths are relative to `http://localhost:13000/api/v2` (LOCAL). On
+> STAGING the same paths live only on the private network
+> (`http://hablu-staging-backend:13000/api/v2`) — the browser can never call them;
+> the frontend BFF is the only caller.
