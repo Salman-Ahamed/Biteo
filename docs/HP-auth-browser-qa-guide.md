@@ -373,22 +373,28 @@ is set later, after email verification).
 ✅ Pass looks like
 - Steps 2–3: clear field errors; you do not advance.
 - Step 4: name + email only, no password.
-- Step 5: a loading state; a **success toast**; redirect to
-  `/verify-user?email=…`; a verification email arrives shortly; **you are NOT
-  logged in**.
-- Step 6: no crash; a neutral "if eligible…" acknowledgement that does **not**
-  confirm whether the account exists; you stay on the page.
+- Step 5: a loading state; a **success toast**; the page **stays on
+  `/register`** with a neutral acknowledgement and an **Enter verification
+  code** button; a verification email arrives shortly; **you are NOT logged in**.
+  (One screen for every address is deliberate: the backend answers identically
+  for a new, a pending and an already-verified address so the form cannot be used
+  to discover accounts. One extra click is the price of that guarantee.)
+- Step 6: no crash; the **same** neutral acknowledgement (no "already
+  registered" wording, no different toast, no different destination); no second
+  email is sent for an already-verified address; you stay on the page.
 
 ⚠️ Also try (register failure — A6, optional): ask the developer to **stop the
 backend**, then submit. You should see an **error**, **no** success toast, **no**
-redirect, your typed text kept, and it works again after the backend restarts.
+acknowledgement screen, your typed text kept, and it works again after the
+backend restarts.
 
 🖥️ Staging: A6 needs a deliberate **VPS action** (stop/restart the staging
 container), so it is **developer-assisted**. If that is not scheduled, mark A6
 **N/A** and do not fail the Station for it.
 
-📸 Screenshot this: the success toast + the `/verify-user` page; and the duplicate
-(the neutral message).
+📸 Screenshot this: the success toast + the neutral acknowledgement screen (step
+5); the same screen for the duplicate (step 6); and `/verify-user` after pressing
+**Enter verification code**.
 
 ☐ Result: PASS / FAIL / BLOCKED — Notes: ______
 
@@ -400,7 +406,8 @@ container), so it is **developer-assisted**. If that is not scheduled, mark A6
 
 🔌 `POST /api/v2/auth/resend-verification`
 
-📋 Before you start: Station 2 done; you are on `/verify-user`.
+📋 Before you start: Station 2 done; press **Enter verification code** to reach
+`/verify-user`.
 
 ▶️ Steps
 1. Press **Resend** once and watch the button. **(A12)**
@@ -482,8 +489,11 @@ and the exact message before calling it a bug.
    `/profile`.
 
 ✅ Pass looks like
-- Step 1: an error; you stay on `/login`; **your typed text is kept**; no session.
-- Step 2: a message **no stronger** than step 1 (never says "email not found").
+- Step 1: an inline message *"Email or password is incorrect."*; you stay on
+  `/login`; **your typed text is kept**; the **email field is NOT marked
+  invalid** (a syntactically valid address must never be reported as malformed —
+  this was F-03 in the 2026-10-23 report); no session.
+- Step 2: the **same** message as step 1 (never says "email not found").
 - Step 3: login is **refused** (unverified) — no session.
 - Step 4: success toast; redirect to **`/`**; the navbar/profile shows you are
   signed in.
@@ -657,7 +667,10 @@ not a FAIL.
 - Step 1: a drawer titled **Change Password** with **Current / New / Confirm**
   (v2 has **no** email-code step here).
 - Step 2: an error; you can retry; **you are not signed out**.
-- Step 3: correct validation messages; the password is unchanged.
+- Step 3: **visible** required-field errors under each empty input (Current /
+  New / Confirm) and focus on the first one; a New ≠ Confirm pair reports *"The two
+  passwords do not match!"* under Confirm. The password is unchanged either way.
+  (An error that only moved focus was F-04 in the 2026-10-23 report.)
 - Step 4: success *"Your password has been changed. For security, please log in
   again."*; redirect to `/login`; **all** sessions are revoked (the other place is
   signed out); old password fails, new works.
